@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: calculator
+
+loan:
+  baseRate: 0.05
+
+server:
+  port: 4455
+
+application:
+  endpoint:
+    offers: "/offers"
+    calc: "/calc"
