@@ -87,8 +87,8 @@ public class ScoringDataDto {
 
     String accountNumber;
 
-    boolean isInsuranceEnabled;
+    Boolean isInsuranceEnabled;
 
-    boolean isSalaryClient;
+    Boolean isSalaryClient;
 }
 

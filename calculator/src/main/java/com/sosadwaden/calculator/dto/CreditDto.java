@@ -33,10 +33,10 @@ public class CreditDto {
     BigDecimal psk;
 
     @Schema(description = "Включена ли страховка")
-    boolean isInsuranceEnabled;
+    Boolean isInsuranceEnabled;
 
     @Schema(description = "Зарплатный клиент")
-    boolean isSalaryClient;
+    Boolean isSalaryClient;
 
     @Schema(description = "График платежей")
     List<PaymentScheduleElementDto> paymentSchedule;

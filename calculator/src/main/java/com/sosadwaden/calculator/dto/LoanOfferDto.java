@@ -36,8 +36,8 @@ public class LoanOfferDto {
     BigDecimal rate;
 
     @Schema(description = "Включена ли страховка", example = "105032.23")
-    boolean isInsuranceEnabled;
+    Boolean isInsuranceEnabled;
 
     @Schema(description = "Зарплатный клиент")
-    boolean isSalaryClient;
+    Boolean isSalaryClient;
 }

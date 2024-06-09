@@ -95,13 +95,14 @@ public class ScoringServiceImpl implements ScoringService {
         }
 
         logger.info("Скоринг успешно завершён для запроса: {}", request);
+        logger.info("Результирующая ставка: {}", resultRate);
 
         return resultRate;
     }
 
     private BigDecimal calculateAdjustedRate(ScoringDataDto request) {
-        boolean isInsuranceEnabled = request.isInsuranceEnabled();
-        boolean isSalaryClient = request.isSalaryClient();
+        Boolean isInsuranceEnabled = request.getIsInsuranceEnabled();
+        Boolean isSalaryClient = request.getIsSalaryClient();
         BigDecimal adjustedRate = baseRate;
 
         if (!isInsuranceEnabled && !isSalaryClient) {

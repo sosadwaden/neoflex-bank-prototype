@@ -3,7 +3,7 @@ spring:
     name: calculator
 
 loan:
-  baseRate: 0.05
+  baseRate: 0.15
 
 server:
   port: 4455

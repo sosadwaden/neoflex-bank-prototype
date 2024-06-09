@@ -68,8 +68,8 @@ public class CalculatorServiceImpl implements CalculatorService {
                 .monthlyPayment(monthlyPayment)
                 .rate(rate)
                 .psk(psk)
-                .isInsuranceEnabled(request.isInsuranceEnabled())
-                .isSalaryClient(request.isSalaryClient())
+                .isInsuranceEnabled(request.getIsInsuranceEnabled())
+                .isSalaryClient(request.getIsSalaryClient())
                 .paymentSchedule(paymentSchedule)
                 .build();
 

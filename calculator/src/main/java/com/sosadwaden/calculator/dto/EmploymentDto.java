@@ -30,7 +30,7 @@ public class EmploymentDto {
     BigDecimal salary;
 
     @ValidEnum(enumClass = Position.class)
-    @Schema(description = "Занимаемая должность", example = "MIDDLE_MANAJER")
+    @Schema(description = "Занимаемая должность", example = "MIDDLE_MANAGER")
     Position position;
 
     @Schema(description = "Общий стаж работы")
