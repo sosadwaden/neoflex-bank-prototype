@@ -7,7 +7,6 @@
         <groupId>com.sosadwaden</groupId>
         <artifactId>neoflex-bank-prototype</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <!--        <relativePath>neoflex-bank-prototype/pom.xml</relativePath>-->
     </parent>
 
     <artifactId>calculator</artifactId>

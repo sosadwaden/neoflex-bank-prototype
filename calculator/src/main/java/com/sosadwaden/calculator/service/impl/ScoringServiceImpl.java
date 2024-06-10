@@ -77,20 +77,19 @@ public class ScoringServiceImpl implements ScoringService {
 
         Gender gender = request.getGender();
 
-        if (gender == Gender.FEMALE && (age >= 32 && age <= 60)) {
-            resultRate = resultRate.subtract(new BigDecimal("0.03"));
-        } else if (gender == Gender.MALE && (age >= 30 && age <= 55)) {
+        if ((gender == Gender.FEMALE && (age >= 32 && age <= 60)) ||
+            (gender == Gender.MALE && (age >= 30 && age <= 55))) {
             resultRate = resultRate.subtract(new BigDecimal("0.03"));
         }
 
         Integer workExperienceCurrent = request.getEmployment().getWorkExperienceCurrent();
         Integer workExperienceTotal = request.getEmployment().getWorkExperienceTotal();
 
-        if (workExperienceTotal < 18) {
+        if (workExperienceTotal < 6) {
             throw new ScoringFailureException("Недостаточно опыта работы");
         }
 
-        if ( workExperienceCurrent < 3) {
+        if (workExperienceCurrent < 3) {
             throw new ScoringFailureException("Недостаточно опыта работы на текущем месте");
         }
 

@@ -16,6 +16,7 @@ public class AdultValidator implements ConstraintValidator<Adult, LocalDate> {
         if (birthdate == null) {
             return true;
         }
+
         return Period.between(birthdate, LocalDate.now()).getYears() >= 18;
     }
 }

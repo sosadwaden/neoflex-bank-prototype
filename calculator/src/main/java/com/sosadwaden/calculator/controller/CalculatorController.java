@@ -25,7 +25,6 @@ import java.util.List;
 
 @Tag(name = "Calculator controller", description = "Контроллер для путей /calculator")
 @Validated
-//@RequiredArgsConstructor
 @RequestMapping("/calculator")
 @RestController
 public class CalculatorController {
