@@ -85,7 +85,7 @@ public class ScoringServiceImpl implements ScoringService {
         Integer workExperienceCurrent = request.getEmployment().getWorkExperienceCurrent();
         Integer workExperienceTotal = request.getEmployment().getWorkExperienceTotal();
 
-        if (workExperienceTotal < 6) {
+        if (workExperienceTotal < 18) {
             throw new ScoringFailureException("Недостаточно опыта работы");
         }
 

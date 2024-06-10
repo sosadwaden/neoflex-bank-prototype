@@ -1,8 +1,5 @@
 package com.sosadwaden.calculator.service;
 
-import com.sosadwaden.calculator.service.impl.ScoringServiceImpl;
-import org.junit.jupiter.api.Test;
-
 import com.sosadwaden.calculator.dto.EmploymentDto;
 import com.sosadwaden.calculator.dto.ScoringDataDto;
 import com.sosadwaden.calculator.enums.EmploymentStatus;
@@ -10,6 +7,8 @@ import com.sosadwaden.calculator.enums.Gender;
 import com.sosadwaden.calculator.enums.MaritalStatus;
 import com.sosadwaden.calculator.enums.Position;
 import com.sosadwaden.calculator.exception.ScoringFailureException;
+import com.sosadwaden.calculator.service.impl.ScoringServiceImpl;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.ConfigDataApplicationContextInitializer;
