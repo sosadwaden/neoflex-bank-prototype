@@ -4,10 +4,9 @@ import com.sosadwaden.deal.entity.enums.EmploymentPosition;
 import com.sosadwaden.deal.entity.enums.EmploymentStatus;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Embeddable;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.UUID;
 
@@ -21,11 +20,10 @@ import java.util.UUID;
 @Embeddable
 public class Employment {
 
-    UUID employmentUUID;
-
     @Enumerated(EnumType.STRING)
     EmploymentStatus status;
 
+    @Column(name = "employer_inn")
     String employerINN;
 
     BigDecimal salary;

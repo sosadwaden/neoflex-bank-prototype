@@ -19,7 +19,7 @@ server:
 application:
   endpoint:
     statement: "/statement"
-    offer_select: "/offer/select"
+    offerSelect: "/offer/select"
     calculate: "/calculate"
     calculatorClient: "http://localhost:4455"
 

@@ -6,11 +6,12 @@ import com.sosadwaden.deal.dto.LoanStatementRequestDto;
 import com.sosadwaden.deal.entity.Client;
 import com.sosadwaden.deal.entity.Statement;
 import com.sosadwaden.deal.entity.enums.ApplicationStatus;
+import com.sosadwaden.deal.entity.jsonb_entity.AppliedOffer;
+import com.sosadwaden.deal.mapperMapStruct.AppliedOfferMapper;
 import com.sosadwaden.deal.repository.ClientRepository;
 import com.sosadwaden.deal.repository.StatementRepository;
 import com.sosadwaden.deal.service.ClientMapper;
 import com.sosadwaden.deal.service.DealService;
-import lombok.RequiredArgsConstructor;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -23,24 +24,35 @@ import java.util.List;
 import java.util.UUID;
 
 @Service
-@RequiredArgsConstructor
 public class DealServiceImpl implements DealService {
 
     private final ClientRepository clientRepository;
     private final StatementRepository statementRepository;
     private final ClientMapper clientMapper;
     private final RestTemplate restTemplate;
+    private final AppliedOfferMapper appliedOfferMapper = AppliedOfferMapper.INSTANCE;
+
+    public DealServiceImpl(ClientRepository clientRepository,
+                           StatementRepository statementRepository,
+                           ClientMapper clientMapper,
+                           RestTemplate restTemplate) {
+        this.clientRepository = clientRepository;
+        this.statementRepository = statementRepository;
+        this.clientMapper = clientMapper;
+        this.restTemplate = restTemplate;
+    }
 
     @Override
     public List<LoanOfferDto> statement(LoanStatementRequestDto request) {
         Client client = clientMapper.LoanStatementRequestDtoToClient(request);
-        clientRepository.save(client);
+        client = clientRepository.save(client);
 
         Statement statement = Statement.builder()
+                .statementId(UUID.randomUUID())
                 .client(client)
                 .build();
 
-        statementRepository.save(statement);
+        statement = statementRepository.save(statement);
 
         List<LoanOfferDto> responseBody = sendPostRequestToCalculatorOffers(request);
 
@@ -57,8 +69,13 @@ public class DealServiceImpl implements DealService {
     @Override
     public void offerSelect(LoanOfferDto request) {
         Statement statement = statementRepository.getReferenceById(request.getStatementId());
+        AppliedOffer appliedOffer = appliedOfferMapper.loanOfferDtoToAppliedOffer(request);
 
         statement.setStatus(ApplicationStatus.APPROVED);
+        // TODO непонял, тут должна быть история статусов
+        statement.setAppliedOffer(appliedOffer);
+
+        statementRepository.save(statement);
     }
 
     @Override

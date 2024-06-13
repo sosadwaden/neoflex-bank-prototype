@@ -12,6 +12,7 @@ import org.hibernate.annotations.TypeDef;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -37,13 +38,12 @@ public class Statement {
     @ManyToOne
     @JoinColumn(name = "client_id")
     Client client;
-//
+
 //    @ManyToOne
 //    @JoinColumn(name = "credit_id")
 //    Credit credit;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "status", insertable = false, updatable = false)
     ApplicationStatus status;
 
     LocalDateTime creationDate;
@@ -58,5 +58,5 @@ public class Statement {
 
     @Type(type = "jsonb")
     @Column(columnDefinition = "jsonb")
-    StatusHistory statusHistory;
+    List<StatusHistory> statusHistory;
 }

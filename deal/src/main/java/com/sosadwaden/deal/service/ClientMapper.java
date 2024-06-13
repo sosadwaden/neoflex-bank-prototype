@@ -13,7 +13,6 @@ public class ClientMapper {
 
     public Client LoanStatementRequestDtoToClient(LoanStatementRequestDto request) {
         Passport passport = Passport.builder()
-                .passportUUID(UUID.randomUUID())
                 .series(request.getPassportSeries())
                 .number(request.getPassportNumber())
                 .build();
@@ -22,7 +21,7 @@ public class ClientMapper {
                 .build();
 
         return Client.builder()
-                .clientId(null)
+                .clientId(UUID.randomUUID())
                 .lastName(request.getLastName())
                 .firstName(request.getFirstName())
                 .middleName(request.getMiddleName())

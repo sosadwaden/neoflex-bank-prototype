@@ -2,8 +2,11 @@ package com.sosadwaden.deal.entity.jsonb_entity;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.Embeddable;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.time.LocalDate;
 import java.util.UUID;
 
@@ -16,8 +19,6 @@ import java.util.UUID;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Embeddable
 public class Passport {
-
-    UUID passportUUID;
 
     String series;
 

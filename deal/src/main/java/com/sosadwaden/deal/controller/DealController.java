@@ -24,14 +24,14 @@ public class DealController {
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
-    @PostMapping("${application.endpoint.offer_select}")
-    public ResponseEntity<Void> select(@RequestBody LoanOfferDto request) {
-        return null;
+    @PostMapping("${application.endpoint.offerSelect}")
+    public void select(@RequestBody LoanOfferDto request) {
+        dealService.offerSelect(request);
     }
 
     @PostMapping("${application.endpoint.calculate}/{statementId}")
-    public ResponseEntity<Void> calculate(@RequestBody FinishRegistrationRequestDto request,
+    public void calculate(@RequestBody FinishRegistrationRequestDto request,
                                           @PathVariable String param) {
-        return null;
+        dealService.calculateByStatementId(request, param);
     }
 }
