@@ -4,12 +4,14 @@ import com.sosadwaden.deal.dto.LoanStatementRequestDto;
 import com.sosadwaden.deal.entity.Client;
 import com.sosadwaden.deal.entity.jsonb_entity.Employment;
 import com.sosadwaden.deal.entity.jsonb_entity.Passport;
+import org.springframework.stereotype.Component;
 
 import java.util.UUID;
 
+@Component
 public class ClientMapper {
 
-    public Client mapToClient(LoanStatementRequestDto request) {
+    public Client LoanStatementRequestDtoToClient(LoanStatementRequestDto request) {
         Passport passport = Passport.builder()
                 .passportUUID(UUID.randomUUID())
                 .series(request.getPassportSeries())
@@ -29,6 +31,5 @@ public class ClientMapper {
                 .passportId(passport)
                 .employmentId(employment)
                 .build();
-    }
     }
 }

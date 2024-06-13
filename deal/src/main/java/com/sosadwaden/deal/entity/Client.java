@@ -7,11 +7,13 @@ import com.sosadwaden.deal.entity.jsonb_entity.Passport;
 import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -27,7 +29,11 @@ import java.util.UUID;
 public class Client {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(
+            name = "UUID",
+            strategy = "org.hibernate.id.UUIDGenerator"
+    )
     UUID clientId;
 
     String lastName;
@@ -57,4 +63,7 @@ public class Client {
     Employment employmentId;
 
     String accountNumber;
+
+    @OneToMany(mappedBy = "client")
+    List<Statement> statements;
 }

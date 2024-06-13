@@ -5,7 +5,10 @@ spring:
     url: jdbc:postgresql://localhost:5432/neoflex_bank_prototype
     username: postgres
     password: postgres
+    driver-class-name: org.postgresql.Driver
   jpa:
+    hibernate:
+      ddl-auto: update
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
@@ -18,4 +21,5 @@ application:
     statement: "/statement"
     offer_select: "/offer/select"
     calculate: "/calculate"
+    calculatorClient: "http://localhost:4455"
 

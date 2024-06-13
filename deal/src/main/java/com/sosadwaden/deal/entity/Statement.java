@@ -1,10 +1,12 @@
 package com.sosadwaden.deal.entity;
 
 import com.sosadwaden.deal.entity.enums.ApplicationStatus;
+import com.sosadwaden.deal.entity.jsonb_entity.AppliedOffer;
 import com.sosadwaden.deal.entity.jsonb_entity.StatusHistory;
 import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
 
@@ -25,25 +27,30 @@ import java.util.UUID;
 public class Statement {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(
+            name = "UUID",
+            strategy = "org.hibernate.id.UUIDGenerator"
+    )
     UUID statementId;
 
-    @OneToOne
-    @JoinColumn(name = "client_id", referencedColumnName = "statement_id")
+    @ManyToOne
+    @JoinColumn(name = "client_id")
     Client client;
-
-    @OneToOne
-    @JoinColumn(name = "credit_id", referencedColumnName = "statement_id")
-    Credit credit;
+//
+//    @ManyToOne
+//    @JoinColumn(name = "credit_id")
+//    Credit credit;
 
     @Enumerated(EnumType.STRING)
+    @Column(name = "status", insertable = false, updatable = false)
     ApplicationStatus status;
 
     LocalDateTime creationDate;
 
     @Type(type = "jsonb")
     @Column(columnDefinition = "jsonb")
-    JsonBinaryType appliedOffer;
+    AppliedOffer appliedOffer;
 
     LocalDateTime signDate;
 

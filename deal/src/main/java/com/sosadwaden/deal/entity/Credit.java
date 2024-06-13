@@ -4,10 +4,12 @@ import com.sosadwaden.deal.entity.enums.CreditStatus;
 import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -22,27 +24,34 @@ import java.util.UUID;
 public class Credit {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(
+            name = "UUID",
+            strategy = "org.hibernate.id.UUIDGenerator"
+    )
     UUID creditId;
+//
+//    BigDecimal amount;
+//
+//    Integer term;
+//
+//    BigDecimal monthlyPayment;
+//
+//    BigDecimal rate;
+//
+//    BigDecimal psk;
+//
+//    @Type(type = "jsonb")
+//    @Column(columnDefinition = "jsonb")
+//    PaymentSchedule paymentSchedule;
+//
+//    Boolean insuranceEnabled;
+//
+//    Boolean salaryClient;
+//
+//    @Enumerated(EnumType.STRING)
+//    CreditStatus creditStatus;
 
-    BigDecimal amount;
-
-    Integer term;
-
-    BigDecimal monthlyPayment;
-
-    BigDecimal rate;
-
-    BigDecimal psk;
-
-    @Type(type = "jsonb")
-    @Column(columnDefinition = "jsonb")
-    JsonBinaryType paymentSchedule; // TODO тип данных под вопросом
-
-    Boolean insuranceEnabled;
-
-    Boolean salaryClient;
-
-    @Enumerated(EnumType.STRING)
-    CreditStatus creditStatus;
+//    @OneToMany(mappedBy = "credit")
+//    List<Statement> statements;
 }
