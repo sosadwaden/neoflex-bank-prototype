@@ -141,9 +141,11 @@ public class DealServiceImpl implements DealService {
 
         credit.setCreditStatus(CreditStatus.CALCULATED);
         credit.getStatements().add(statement);
-        statement.setStatus(ApplicationStatus.CREDIT_ISSUED);
 
-        statementRepository.save(statement);
+        statement.setStatus(ApplicationStatus.CREDIT_ISSUED);
+        statement.setCredit(credit);
+
         creditRepository.save(credit);
+        statementRepository.save(statement);
     }
 }
