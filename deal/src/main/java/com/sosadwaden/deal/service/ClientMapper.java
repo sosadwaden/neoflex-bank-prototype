@@ -6,8 +6,6 @@ import com.sosadwaden.deal.entity.jsonb_entity.Employment;
 import com.sosadwaden.deal.entity.jsonb_entity.Passport;
 import org.springframework.stereotype.Component;
 
-import java.util.UUID;
-
 @Component
 public class ClientMapper {
 
@@ -21,7 +19,6 @@ public class ClientMapper {
                 .build();
 
         return Client.builder()
-                .clientId(UUID.randomUUID())
                 .lastName(request.getLastName())
                 .firstName(request.getFirstName())
                 .middleName(request.getMiddleName())

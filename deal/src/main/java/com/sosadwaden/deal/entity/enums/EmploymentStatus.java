@@ -1,5 +1,5 @@
 package com.sosadwaden.deal.entity.enums;
 
 public enum EmploymentStatus {
-    UNEMPLOYED, SELF_EMPLOYED, EMPLOYED, BUSINESS_OWNER
+    EMPLOYED, UNEMPLOYED, SELF_EMPLOYED, BUSINESS_OWNER
 }

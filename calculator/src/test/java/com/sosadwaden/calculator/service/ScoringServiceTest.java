@@ -2,10 +2,10 @@ package com.sosadwaden.calculator.service;
 
 import com.sosadwaden.calculator.dto.EmploymentDto;
 import com.sosadwaden.calculator.dto.ScoringDataDto;
+import com.sosadwaden.calculator.enums.EmploymentPosition;
 import com.sosadwaden.calculator.enums.EmploymentStatus;
 import com.sosadwaden.calculator.enums.Gender;
 import com.sosadwaden.calculator.enums.MaritalStatus;
-import com.sosadwaden.calculator.enums.Position;
 import com.sosadwaden.calculator.exception.ScoringFailureException;
 import com.sosadwaden.calculator.service.impl.ScoringServiceImpl;
 import org.junit.jupiter.api.Test;
@@ -34,7 +34,7 @@ class ScoringServiceTest {
     @Test
     void scoringTest() {
         ScoringDataDto request = createScoringDataDtoForTest(MaritalStatus.MARRIED,
-                EmploymentStatus.EMPLOYED, BigDecimal.valueOf(60000), Position.MIDDLE_MANAGER,
+                EmploymentStatus.EMPLOYED, BigDecimal.valueOf(60000), EmploymentPosition.MID_MANAGER,
                 true, true);
 
         BigDecimal resultRate = scoringService.scoring(request);
@@ -46,7 +46,7 @@ class ScoringServiceTest {
     @Test
     void unemployedScoringTest() {
         ScoringDataDto request = createScoringDataDtoForTest(MaritalStatus.MARRIED,
-                EmploymentStatus.UNEMPLOYED, BigDecimal.valueOf(60000), Position.MIDDLE_MANAGER,
+                EmploymentStatus.UNEMPLOYED, BigDecimal.valueOf(60000), EmploymentPosition.MID_MANAGER,
                 true, true);
 
         assertThrows(ScoringFailureException.class, () -> scoringService.scoring(request));
@@ -55,7 +55,7 @@ class ScoringServiceTest {
     private ScoringDataDto createScoringDataDtoForTest(MaritalStatus maritalStatus,
                                                        EmploymentStatus employmentStatus,
                                                        BigDecimal salary,
-                                                       Position position,
+                                                       EmploymentPosition employmentPosition,
                                                        Boolean isInsuranceEnabled,
                                                        Boolean isSalaryClient) {
         return ScoringDataDto.builder()
@@ -76,7 +76,7 @@ class ScoringServiceTest {
                         .employmentStatus(employmentStatus)
                         .employerINN("1234567890")
                         .salary(salary)
-                        .position(position)
+                        .employmentPosition(employmentPosition)
                         .workExperienceTotal(24)
                         .workExperienceCurrent(24)
                         .build())

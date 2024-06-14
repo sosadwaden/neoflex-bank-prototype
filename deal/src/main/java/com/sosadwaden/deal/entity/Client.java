@@ -13,6 +13,7 @@ import org.hibernate.annotations.TypeDef;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -64,6 +65,7 @@ public class Client {
 
     String accountNumber;
 
+    @Builder.Default
     @OneToMany(mappedBy = "client")
-    List<Statement> statements;
+    List<Statement> statements = new ArrayList<>();
 }

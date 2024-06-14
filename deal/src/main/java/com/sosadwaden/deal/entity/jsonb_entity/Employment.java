@@ -4,11 +4,11 @@ import com.sosadwaden.deal.entity.enums.EmploymentPosition;
 import com.sosadwaden.deal.entity.enums.EmploymentStatus;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import java.math.BigDecimal;
-import java.util.UUID;
 
 @Getter
 @Setter
@@ -17,7 +17,6 @@ import java.util.UUID;
 @NoArgsConstructor
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
-@Embeddable
 public class Employment {
 
     @Enumerated(EnumType.STRING)

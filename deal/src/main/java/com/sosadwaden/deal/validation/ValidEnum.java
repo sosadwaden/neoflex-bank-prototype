@@ -1,6 +1,5 @@
 package com.sosadwaden.deal.validation;
 
-
 import javax.validation.Constraint;
 import javax.validation.Payload;
 import java.lang.annotation.*;
@@ -8,7 +7,7 @@ import java.lang.annotation.*;
 @Target({ElementType.FIELD, ElementType.PARAMETER})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-@Constraint(validatedBy = EnumValidator.class)
+@Constraint(validatedBy = {EnumValidator.class})
 public @interface ValidEnum {
 
     Class<? extends Enum<?>> enumClass();
