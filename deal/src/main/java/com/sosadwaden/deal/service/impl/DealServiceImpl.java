@@ -59,6 +59,7 @@ public class DealServiceImpl implements DealService {
 
         Statement statement = Statement.builder()
                 .client(client)
+                .status(ApplicationStatus.PREAPPROVAL)
                 .build();
 
         statement = statementRepository.save(statement);
@@ -88,6 +89,7 @@ public class DealServiceImpl implements DealService {
                 .changeType(ChangeType.MANUAL) // TODO не знаю какой ChangeType
                 .build());
         statement.setAppliedOffer(appliedOffer);
+        statement.setStatus(ApplicationStatus.APPROVED);
 
         statementRepository.save(statement);
     }
@@ -142,7 +144,7 @@ public class DealServiceImpl implements DealService {
         credit.setCreditStatus(CreditStatus.CALCULATED);
         credit.getStatements().add(statement);
 
-        statement.setStatus(ApplicationStatus.CREDIT_ISSUED);
+        statement.setStatus(ApplicationStatus.CC_APPROVED);
         statement.setCredit(credit);
 
         creditRepository.save(credit);
