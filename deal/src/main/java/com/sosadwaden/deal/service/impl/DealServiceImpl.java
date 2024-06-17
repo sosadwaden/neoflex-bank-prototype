@@ -13,12 +13,13 @@ import com.sosadwaden.deal.entity.jsonb_entity.Employment;
 import com.sosadwaden.deal.entity.jsonb_entity.StatusHistory;
 import com.sosadwaden.deal.exception.StatementNotFoundException;
 import com.sosadwaden.deal.mapperMapStruct.AppliedOfferMapper;
+import com.sosadwaden.deal.mapperMapStruct.ClientMapper;
 import com.sosadwaden.deal.mapperMapStruct.CreditMapper;
 import com.sosadwaden.deal.repository.ClientRepository;
 import com.sosadwaden.deal.repository.CreditRepository;
 import com.sosadwaden.deal.repository.StatementRepository;
-import com.sosadwaden.deal.service.ClientMapper;
 import com.sosadwaden.deal.service.DealService;
+import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -28,33 +29,23 @@ import java.util.List;
 import java.util.UUID;
 
 @Service
+@RequiredArgsConstructor
 public class DealServiceImpl implements DealService {
 
     private final ClientRepository clientRepository;
     private final StatementRepository statementRepository;
     private final CreditRepository creditRepository;
-    private final ClientMapper clientMapper;
     private final CalculatorClient calculatorClient;
-    private final AppliedOfferMapper appliedOfferMapper = AppliedOfferMapper.INSTANCE;
-    private final CreditMapper creditMapper = CreditMapper.INSTANCE;
+    private final ClientMapper clientMapper;
+    private final AppliedOfferMapper appliedOfferMapper;
+    private final CreditMapper creditMapper;
     private static final Logger logger = LoggerFactory.getLogger(DealServiceImpl.class);
-
-    public DealServiceImpl(ClientRepository clientRepository,
-                           StatementRepository statementRepository,
-                           CreditRepository creditRepository, ClientMapper clientMapper,
-                           CalculatorClient calculatorClient) {
-        this.clientRepository = clientRepository;
-        this.statementRepository = statementRepository;
-        this.creditRepository = creditRepository;
-        this.clientMapper = clientMapper;
-        this.calculatorClient = calculatorClient;
-    }
 
     @Override
     public List<LoanOfferDto> statement(LoanStatementRequestDto request) {
         logger.debug("Создание сущностей Client и Statement");
 
-        Client client = clientMapper.LoanStatementRequestDtoToClient(request);
+        Client client = clientMapper.loanStatementRequestDtoToClient(request);
         clientRepository.save(client);
 
         Statement statement = Statement.builder()

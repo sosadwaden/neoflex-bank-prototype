@@ -13,9 +13,10 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@EqualsAndHashCode
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Embeddable
-public class PaymentSchedule {
+public class PaymentScheduleElement {
 
     Integer number;
 

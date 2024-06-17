@@ -29,7 +29,7 @@ public class DealController {
             description = "Создать Client и Statement сущности; присвоить id созданной заявки Statement"
     )
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Расчёт прошёл успешно"),
+            @ApiResponse(responseCode = "201", description = "Расчёт прошёл успешно"),
     })
     @PostMapping("${application.endpoint.statement}")
     public ResponseEntity<List<LoanOfferDto>> statement(@RequestBody LoanStatementRequestDto request) {
@@ -37,7 +37,7 @@ public class DealController {
         List<LoanOfferDto> response = dealService.statement(request);
 
         logger.info("Сгенерированный ответ: {}", response);
-        return new ResponseEntity<>(response, HttpStatus.OK);
+        return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 
     @Operation(
@@ -46,12 +46,15 @@ public class DealController {
                           "принятое предложение LoanOfferDto устанавливается в поле appliedOffer."
     )
     @ApiResponses(value = {
+            @ApiResponse(responseCode = "202", description = "Заявка успешно обновлена"),
             @ApiResponse(responseCode = "404", description = "Statement не найден")
     })
     @PostMapping("${application.endpoint.offerSelect}")
-    public void select(@RequestBody LoanOfferDto request) {
+    public ResponseEntity<Void> select(@RequestBody LoanOfferDto request) {
         logger.info("Полученный запрос: {}", request);
         dealService.offerSelect(request);
+
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
 
     @Operation(
@@ -59,12 +62,15 @@ public class DealController {
             description = "Создаётся сущность Credit и сохраняется в базу данных"
     )
     @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Кредит успешно рассчитан и заявка обновлена"),
             @ApiResponse(responseCode = "404", description = "Statement не найден")
     })
     @PostMapping("/calculate/{statementId}")
-    public void calculate(@PathVariable String statementId,
+    public ResponseEntity<Void> calculate(@PathVariable String statementId,
                           @RequestBody FinishRegistrationRequestDto request) {
         logger.info("Полученный запрос: {}", request);
         dealService.calculateByStatementId(request, statementId);
+
+        return ResponseEntity.status(HttpStatus.OK).build();
     }
 }

@@ -1,7 +1,7 @@
 package com.sosadwaden.deal.entity;
 
 import com.sosadwaden.deal.entity.enums.CreditStatus;
-import com.sosadwaden.deal.entity.jsonb_entity.PaymentSchedule;
+import com.sosadwaden.deal.entity.jsonb_entity.PaymentScheduleElement;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 import org.hibernate.annotations.GenericGenerator;
@@ -44,7 +44,7 @@ public class Credit {
 
     @Type(type = "jsonb")
     @Column(columnDefinition = "jsonb")
-    List<PaymentSchedule> paymentSchedule;
+    List<PaymentScheduleElement> paymentSchedule;
 
     Boolean isInsuranceEnabled;
 

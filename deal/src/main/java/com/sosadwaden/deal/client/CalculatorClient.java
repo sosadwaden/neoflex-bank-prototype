@@ -13,6 +13,7 @@ import org.springframework.http.*;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Component
@@ -40,7 +41,14 @@ public class CalculatorClient {
                 }
         );
 
-        return response.getBody();
+        List<LoanOfferDto> responseBody = response.getBody();
+
+        if (responseBody == null) {
+            logger.warn("Получен пустой ответ от /calculator/offers");
+            responseBody = new ArrayList<>();
+        }
+
+        return responseBody;
     }
 
     public CreditDto sendPostRequestToCalculatorCals(ScoringDataDto request) {
@@ -60,6 +68,13 @@ public class CalculatorClient {
                 CreditDto.class
         );
 
-        return response.getBody();
+        CreditDto responseBody = response.getBody();
+
+        if (responseBody == null) {
+            logger.warn("Получен пустой ответ от /calculator/calc");
+            responseBody = CreditDto.builder().build();
+        }
+
+        return responseBody;
     }
 }

@@ -15,6 +15,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@EqualsAndHashCode
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Embeddable
 public class StatusHistory {
