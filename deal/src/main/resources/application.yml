@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: deal
+  datasource:
+    url: jdbc:postgresql://localhost:5432/neoflex_bank_prototype
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+server:
+  port: 4456
+
+application:
+  endpoint:
+    statement: "/statement"
+    offerSelect: "/offer/select"
+    calculate: "/calculate"
+    calculatorClient: "http://localhost:4455"
+

@@ -5,7 +5,7 @@ import com.sosadwaden.calculator.dto.ScoringDataDto;
 import com.sosadwaden.calculator.enums.EmploymentStatus;
 import com.sosadwaden.calculator.enums.Gender;
 import com.sosadwaden.calculator.enums.MaritalStatus;
-import com.sosadwaden.calculator.enums.Position;
+import com.sosadwaden.calculator.enums.EmploymentPosition;
 import com.sosadwaden.calculator.exception.ScoringFailureException;
 import com.sosadwaden.calculator.exception.ValidationError;
 import com.sosadwaden.calculator.exception.ValidationErrorResponse;
@@ -52,7 +52,7 @@ class ExceptionAPIHandlerTest {
                         .employmentStatus(EmploymentStatus.UNEMPLOYED)
                         .employerINN("1234567890")
                         .salary(BigDecimal.valueOf(50000))
-                        .position(Position.MIDDLE_MANAGER)
+                        .employmentPosition(EmploymentPosition.MID_MANAGER)
                         .workExperienceTotal(24)
                         .workExperienceCurrent(10)
                         .build())

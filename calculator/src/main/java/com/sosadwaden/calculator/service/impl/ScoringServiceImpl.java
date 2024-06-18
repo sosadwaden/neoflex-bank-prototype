@@ -4,7 +4,7 @@ import com.sosadwaden.calculator.dto.ScoringDataDto;
 import com.sosadwaden.calculator.enums.EmploymentStatus;
 import com.sosadwaden.calculator.enums.Gender;
 import com.sosadwaden.calculator.enums.MaritalStatus;
-import com.sosadwaden.calculator.enums.Position;
+import com.sosadwaden.calculator.enums.EmploymentPosition;
 import com.sosadwaden.calculator.exception.ScoringFailureException;
 import com.sosadwaden.calculator.service.ScoringService;
 import org.slf4j.Logger;
@@ -45,11 +45,11 @@ public class ScoringServiceImpl implements ScoringService {
             resultRate = resultRate.add(new BigDecimal("0.02"));
         }
 
-        Position position = request.getEmployment().getPosition();
+        EmploymentPosition employmentPosition = request.getEmployment().getEmploymentPosition();
 
-        if (position == Position.MIDDLE_MANAGER) {
+        if (employmentPosition == EmploymentPosition.MID_MANAGER) {
             resultRate = resultRate.subtract(new BigDecimal("0.02"));
-        } else if (position == Position.SENIOR_MANAGER) {
+        } else if (employmentPosition == EmploymentPosition.TOP_MANAGER) {
             resultRate = resultRate.subtract(new BigDecimal("0.03"));
         }
 

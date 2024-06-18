@@ -1,7 +1,7 @@
 package com.sosadwaden.calculator.dto;
 
+import com.sosadwaden.calculator.enums.EmploymentPosition;
 import com.sosadwaden.calculator.enums.EmploymentStatus;
-import com.sosadwaden.calculator.enums.Position;
 import com.sosadwaden.calculator.validation.ValidEnum;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
@@ -29,9 +29,9 @@ public class EmploymentDto {
     @Schema(description = "Зарплата работника")
     BigDecimal salary;
 
-    @ValidEnum(enumClass = Position.class)
-    @Schema(description = "Занимаемая должность", example = "MIDDLE_MANAGER")
-    Position position;
+    @ValidEnum(enumClass = EmploymentPosition.class)
+    @Schema(description = "Занимаемая должность", example = "MID_MANAGER")
+    EmploymentPosition employmentPosition;
 
     @Schema(description = "Общий стаж работы")
     Integer workExperienceTotal;

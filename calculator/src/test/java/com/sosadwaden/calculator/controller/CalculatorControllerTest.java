@@ -1,10 +1,10 @@
 package com.sosadwaden.calculator.controller;
 
 import com.sosadwaden.calculator.dto.*;
+import com.sosadwaden.calculator.enums.EmploymentPosition;
 import com.sosadwaden.calculator.enums.EmploymentStatus;
 import com.sosadwaden.calculator.enums.Gender;
 import com.sosadwaden.calculator.enums.MaritalStatus;
-import com.sosadwaden.calculator.enums.Position;
 import com.sosadwaden.calculator.service.CalculatorService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -58,7 +58,7 @@ class CalculatorControllerTest {
                 .employmentStatus(EmploymentStatus.EMPLOYED)
                 .employerINN("1234567890")
                 .salary(BigDecimal.valueOf(60000))
-                .position(Position.MIDDLE_MANAGER)
+                .employmentPosition(EmploymentPosition.MID_MANAGER)
                 .workExperienceTotal(24)
                 .workExperienceCurrent(24)
                 .build();
