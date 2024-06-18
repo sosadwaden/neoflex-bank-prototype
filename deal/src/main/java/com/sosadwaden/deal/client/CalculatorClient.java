@@ -20,7 +20,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CalculatorClient {
 
-    private static final Logger logger = LoggerFactory.getLogger(DealServiceImpl.class);
+    private static final Logger logger = LoggerFactory.getLogger(CalculatorClient.class);
     private final RestTemplate restTemplate;
 
     public List<LoanOfferDto> sendPostRequestToCalculatorOffers(LoanStatementRequestDto request) {
