@@ -58,7 +58,6 @@ public class DealClient {
         HttpEntity<Object> entity = new HttpEntity<>(request, headers);
         String url = "http://localhost:4456/deal/offer/select";
 
-        // ResponseEntity<List<LoanOfferDto>> response =
         restTemplate.exchange(
                 url,
                 HttpMethod.POST,
@@ -66,16 +65,6 @@ public class DealClient {
                 new ParameterizedTypeReference<List<LoanOfferDto>>() {
                 }
         );
-
-//        List<LoanOfferDto> responseBody = response.getBody();
-//
-//        if (responseBody == null) {
-//            logger.warn("Получен пустой ответ от /deal/offer/select");
-//            responseBody = new ArrayList<>();
-//        }
-//
-//        return responseBody;
     }
-
 
 }
