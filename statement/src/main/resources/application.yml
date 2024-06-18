@@ -1,1 +1,10 @@
-spring.application.name=statement
+spring:
+  application:
+    name: statement
+
+server:
+  port: 4457
+
+application:
+  endpoint:
+    offer: "/offer"
