@@ -127,6 +127,18 @@
 					</annotationProcessorPaths>
 				</configuration>
 			</plugin>
+
+			<plugin>
+				<groupId>org.liquibase</groupId>
+				<artifactId>liquibase-maven-plugin</artifactId>
+				<version>4.18.0</version>
+				<configuration>
+					<changeLogFile>src/main/resources/db/changelog/db.changelog-master.xml</changeLogFile>
+					<url>jdbc:postgresql://localhost:5432/neoflex_bank_prototype</url>
+					<username>postgres</username>
+					<password>postgres</password>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 

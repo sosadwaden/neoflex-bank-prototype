@@ -7,8 +7,7 @@ spring:
     password: postgres
     driver-class-name: org.postgresql.Driver
   liquibase:
-    change-log: db/changelog/changelog-1.0.0.xml
-    enabled: true
+    change-log: db/changelog/changelog-master.xml
   jpa:
     hibernate:
       ddl-auto: validate

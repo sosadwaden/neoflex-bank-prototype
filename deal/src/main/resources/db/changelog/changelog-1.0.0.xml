@@ -71,10 +71,10 @@
             <column name="status" type="varchar(255)"/>
             <column name="status_history" type="jsonb"/>
             <column name="client_id" type="uuid">
-                <constraints nullable="false" foreignKeyName="fkdmspwvw0ux234vtferxbd1q9u" references="client(client_id)"/>
+                <constraints foreignKeyName="fkdmspwvw0ux234vtferxbd1q9u" references="client(client_id)"/>
             </column>
             <column name="credit_id" type="uuid">
-                <constraints nullable="false" foreignKeyName="fkdrij5d3mdeb1hp56154m7c2mw" references="credit(credit_id)"/>
+                <constraints foreignKeyName="fkdrij5d3mdeb1hp56154m7c2mw" references="credit(credit_id)"/>
             </column>
         </createTable>
     </changeSet>
