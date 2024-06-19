@@ -1,14 +1,6 @@
 spring:
   application:
     name: statement
-  datasource:
-    url: jdbc:postgresql://localhost:5432/neoflex_bank_prototype_statement
-    username: postgres
-    password: postgres
-    driver-class-name: org.postgresql.Driver
-  liquibase:
-    change-log: db/changelog/changelog-1.0.0.xml
-    enabled: true
 
 server:
   port: 4457

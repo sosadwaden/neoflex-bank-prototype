@@ -75,7 +75,7 @@ public class DealServiceImpl implements DealService {
 
         statement.setStatus(ApplicationStatus.APPROVED);
         statement.getStatusHistory().add(StatusHistory.builder()
-                .status("Текст") // TODO не знаю какой текст
+                .status("Текст") // TODO поменять со строки на Enum
                 .time(LocalDateTime.now())
                 .changeType(ChangeType.MANUAL) // TODO не знаю какой ChangeType
                 .build());

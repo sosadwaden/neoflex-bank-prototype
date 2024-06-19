@@ -1,4 +1,4 @@
-package com.sosadwaden.statement.configuration;
+package com.sosadwaden.deal.configuration;
 
 import liquibase.integration.spring.SpringLiquibase;
 import org.springframework.beans.factory.annotation.Value;
