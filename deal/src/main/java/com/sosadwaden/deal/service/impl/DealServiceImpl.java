@@ -51,6 +51,7 @@ public class DealServiceImpl implements DealService {
         Statement statement = Statement.builder()
                 .client(client)
                 .status(ApplicationStatus.PREAPPROVAL)
+                .creationDate(LocalDateTime.now())
                 .build();
 
         statement = statementRepository.save(statement);
@@ -73,12 +74,13 @@ public class DealServiceImpl implements DealService {
 
         AppliedOffer appliedOffer = appliedOfferMapper.loanOfferDtoToAppliedOffer(request);
 
-        statement.setStatus(ApplicationStatus.APPROVED);
         statement.getStatusHistory().add(StatusHistory.builder()
-                .status("Текст") // TODO поменять со строки на Enum
-                .time(LocalDateTime.now())
-                .changeType(ChangeType.MANUAL) // TODO не знаю какой ChangeType
+                .status(statement.getStatus())
+                .time(statement.getCreationDate())
+                .changeType(ChangeType.MANUAL)
                 .build());
+
+        statement.setStatus(ApplicationStatus.APPROVED);
         statement.setAppliedOffer(appliedOffer);
         statement.setStatus(ApplicationStatus.APPROVED);
 
@@ -93,6 +95,10 @@ public class DealServiceImpl implements DealService {
                 .orElseThrow(() -> new StatementNotFoundException("Statement с таким id не существует"));
 
         Client client = statement.getClient();
+        client.setGender(request.getGender());
+        client.setMaritalStatus(request.getMaritalStatus());
+        client.setDependentAmount(request.getDependentAmount());
+        client.setAccountNumber(request.getAccountNumber());
 
         EmploymentDto employmentDto = request.getEmployment();
 
