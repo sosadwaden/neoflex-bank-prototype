@@ -65,7 +65,7 @@ public class DealController {
             @ApiResponse(responseCode = "200", description = "Кредит успешно рассчитан и заявка обновлена"),
             @ApiResponse(responseCode = "404", description = "Statement не найден")
     })
-    @PostMapping("/calculate/{statementId}")
+    @PostMapping("${application.endpoint.calculate}/{statementId}")
     public ResponseEntity<Void> calculate(@PathVariable String statementId,
                           @RequestBody FinishRegistrationRequestDto request) {
         logger.info("Полученный запрос: {}", request);

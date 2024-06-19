@@ -23,5 +23,4 @@ application:
     statement: "/statement"
     offerSelect: "/offer/select"
     calculate: "/calculate"
-    calculatorClient: "http://localhost:4455"
 
