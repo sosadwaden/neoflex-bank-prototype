@@ -178,9 +178,7 @@ class DealServiceImplTest {
 
         when(statementRepository.findById(any(UUID.class))).thenReturn(java.util.Optional.empty());
 
-        assertThrows(StatementNotFoundException.class, () -> {
-            dealService.calculateByStatementId(request, statementId);
-        });
+        assertThrows(StatementNotFoundException.class, () -> dealService.calculateByStatementId(request, statementId));
     }
 
     private LoanStatementRequestDto createLoanStatementRequest() {
