@@ -23,8 +23,8 @@ public class ExceptionAPIHandler {
     private static final Logger logger = LoggerFactory.getLogger(ExceptionAPIHandler.class);
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity<ValidationErrorResponse> handleValidationExceptions(MethodArgumentNotValidException ex) {
-        List<ValidationError> errors = ex.getBindingResult()
+    public ResponseEntity<ValidationErrorResponse> handleValidationExceptions(MethodArgumentNotValidException exception) {
+        List<ValidationError> errors = exception.getBindingResult()
                 .getFieldErrors()
                 .stream()
                 .map(error -> ValidationError.builder()
