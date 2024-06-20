@@ -39,10 +39,10 @@ public class StatementController {
     })
     @PostMapping
     public ResponseEntity<List<LoanOfferDto>> calculationOfPossibleLoanTerms(@Valid @RequestBody LoanStatementRequestDto request) {
-        logger.info("Полученный запрос: {}", request);
+        logger.info("Запрос на /statement: {}", request);
         List<LoanOfferDto> response = statementService.calculationOfPossibleLoanTerms(request);
 
-        logger.info("Сгенерированный ответ: {}", response);
+        logger.info("Ответ от /statement: {}", response);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
@@ -52,7 +52,7 @@ public class StatementController {
     @PostMapping("${application.endpoint.offer}")
     public ResponseEntity<Void> offer(@RequestBody LoanOfferDto request) {
         statementService.offer(request);
-        logger.info("Полученный запрос: {}", request);
+        logger.info("Запрос на /statement/offer: {}", request);
 
         return ResponseEntity.status(HttpStatus.OK).build();
     }

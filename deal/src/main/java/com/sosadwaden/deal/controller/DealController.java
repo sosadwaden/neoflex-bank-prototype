@@ -33,10 +33,10 @@ public class DealController {
     })
     @PostMapping("${application.endpoint.statement}")
     public ResponseEntity<List<LoanOfferDto>> statement(@RequestBody LoanStatementRequestDto request) {
-        logger.info("Полученный запрос: {}", request);
+        logger.info("Запрос на /deal/statement: {}", request);
         List<LoanOfferDto> response = dealService.statement(request);
 
-        logger.info("Сгенерированный ответ: {}", response);
+        logger.info("Ответ от /deal/statement: {}", response);
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 
@@ -51,7 +51,7 @@ public class DealController {
     })
     @PostMapping("${application.endpoint.offerSelect}")
     public ResponseEntity<Void> select(@RequestBody LoanOfferDto request) {
-        logger.info("Полученный запрос: {}", request);
+        logger.info("Запрос на /deal/offer/select: {}", request);
         dealService.offerSelect(request);
 
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
@@ -68,7 +68,7 @@ public class DealController {
     @PostMapping("${application.endpoint.calculate}/{statementId}")
     public ResponseEntity<Void> calculate(@PathVariable String statementId,
                           @RequestBody FinishRegistrationRequestDto request) {
-        logger.info("Полученный запрос: {}", request);
+        logger.info("Запрос на /deal/calculate: {}", request);
         dealService.calculateByStatementId(request, statementId);
 
         return ResponseEntity.status(HttpStatus.OK).build();
