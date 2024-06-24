@@ -25,6 +25,7 @@ import org.mockito.MockitoAnnotations;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -111,14 +112,13 @@ class DealServiceImplTest {
         assert statement.getStatus() == ApplicationStatus.APPROVED;
         assert statement.getAppliedOffer() == appliedOffer;
         assert statement.getStatusHistory().size() == 1;
-        assert statement.getStatusHistory().get(0).getStatus().equals("Текст");
+        assert statement.getStatusHistory().get(0).getStatus().equals(ApplicationStatus.PREAPPROVAL);
         assert statement.getStatusHistory().get(0).getChangeType() == ChangeType.MANUAL;
         assert statement.getStatusHistory().get(0).getTime() != null;
     }
 
     @Test
     public void testCalculateByStatementId_success() {
-        // Prepare test data
         FinishRegistrationRequestDto request = createFinishRegistrationRequestDto();
         String statementId = UUID.randomUUID().toString();
         Statement statement = createStatement();
@@ -178,9 +178,7 @@ class DealServiceImplTest {
 
         when(statementRepository.findById(any(UUID.class))).thenReturn(java.util.Optional.empty());
 
-        assertThrows(StatementNotFoundException.class, () -> {
-            dealService.calculateByStatementId(request, statementId);
-        });
+        assertThrows(StatementNotFoundException.class, () -> dealService.calculateByStatementId(request, statementId));
     }
 
     private LoanStatementRequestDto createLoanStatementRequest() {
@@ -211,9 +209,10 @@ class DealServiceImplTest {
 
     private Statement createStatement() {
         return Statement.builder()
+                .statementId(UUID.randomUUID())
                 .client(createClient())
                 .status(ApplicationStatus.PREAPPROVAL)
-                .statementId(UUID.randomUUID())
+                .creationDate(LocalDateTime.now())
                 .build();
     }
 

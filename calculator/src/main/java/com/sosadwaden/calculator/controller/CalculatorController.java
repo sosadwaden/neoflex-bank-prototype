@@ -52,10 +52,10 @@ public class CalculatorController {
     })
     @PostMapping("${application.endpoint.offers}")
     public ResponseEntity<List<LoanOfferDto>> offers(@Valid @RequestBody LoanStatementRequestDto request) {
-            logger.info("Полученный запрос: {}", request);
+            logger.info("Запрос на /calculator/offers: {}", request);
             List<LoanOfferDto> response = calculatorService.generateOffers(request);
 
-            logger.info("Сгенерированный ответ: {}", response);
+            logger.info("Ответ от /calculator/offers: {}", response);
             return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
@@ -81,10 +81,10 @@ public class CalculatorController {
     })
     @PostMapping("${application.endpoint.calc}")
     public ResponseEntity<CreditDto> calc(@Valid @RequestBody ScoringDataDto request) {
-        logger.info("Полученный запрос: {}", request);
+        logger.info("Запрос на /calculator/calc: {}", request);
         CreditDto response = calculatorService.generateCreditDto(request);
 
-        logger.info("Сгенерированный ответ: {}", response);
+        logger.info("Ответ от /calculator/calc: {}", response);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 }

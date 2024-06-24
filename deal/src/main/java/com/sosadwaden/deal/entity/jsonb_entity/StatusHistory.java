@@ -1,5 +1,6 @@
 package com.sosadwaden.deal.entity.jsonb_entity;
 
+import com.sosadwaden.deal.entity.enums.ApplicationStatus;
 import com.sosadwaden.deal.entity.enums.ChangeType;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -20,7 +21,7 @@ import java.time.LocalDateTime;
 @Embeddable
 public class StatusHistory {
 
-    String status;
+    ApplicationStatus status;
 
     LocalDateTime time;
 

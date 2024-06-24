@@ -6,9 +6,11 @@ spring:
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
+  liquibase:
+    change-log: db/changelog/changelog-master.xml
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: validate
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
@@ -21,5 +23,4 @@ application:
     statement: "/statement"
     offerSelect: "/offer/select"
     calculate: "/calculate"
-    calculatorClient: "http://localhost:4455"
 
