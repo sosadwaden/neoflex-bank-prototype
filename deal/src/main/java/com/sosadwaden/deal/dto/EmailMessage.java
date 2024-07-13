@@ -12,6 +12,6 @@ import lombok.experimental.FieldDefaults;
 public class EmailMessage {
 
     String address;
-    Theme theme;
+    Topic topic;
     Long statementId;
 }

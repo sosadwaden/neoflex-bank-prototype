@@ -1,5 +1,6 @@
 package com.sosadwaden.dossier.kafka;
 
+import com.sosadwaden.dossier.enums.Topic;
 import org.apache.kafka.clients.admin.AdminClientConfig;
 import org.apache.kafka.clients.admin.NewTopic;
 import org.springframework.context.annotation.Bean;
@@ -23,31 +24,31 @@ public class KafkaConfig {
 
     @Bean
     public NewTopic topicFinishRegistration() {
-        return new NewTopic("finish-registration", 1, (short) 1);
+        return new NewTopic(Topic.FINISH_REGISTRATION.name(), 1, (short) 1);
     }
 
     @Bean
     public NewTopic topicCreateDocuments() {
-        return new NewTopic("create-documents", 1, (short) 1);
+        return new NewTopic(Topic.CREATE_DOCUMENTS.name(), 1, (short) 1);
     }
 
     @Bean
     public NewTopic topicSendDocuments() {
-        return new NewTopic("send-documents", 1, (short) 1);
+        return new NewTopic(Topic.SEND_DOCUMENTS.name(), 1, (short) 1);
     }
 
     @Bean
     public NewTopic topicSendSes() {
-        return new NewTopic("send-ses", 1, (short) 1);
+        return new NewTopic(Topic.SEND_SES.name(), 1, (short) 1);
     }
 
     @Bean
     public NewTopic topicCreditIssued() {
-        return new NewTopic("credit-issued", 1, (short) 1);
+        return new NewTopic(Topic.CREDIT_ISSUED.name(), 1, (short) 1);
     }
 
     @Bean
     public NewTopic topicStatementDenied() {
-        return new NewTopic("statement-denied", 1, (short) 1);
+        return new NewTopic(Topic.STATEMENT_DENIED.name(), 1, (short) 1);
     }
 }

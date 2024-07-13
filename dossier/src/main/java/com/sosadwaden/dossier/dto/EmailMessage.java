@@ -1,6 +1,6 @@
 package com.sosadwaden.dossier.dto;
 
-import com.sosadwaden.dossier.enums.Theme;
+import com.sosadwaden.dossier.enums.Topic;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -13,6 +13,6 @@ import lombok.experimental.FieldDefaults;
 public class EmailMessage {
 
     String address;
-    Theme theme;
+    Topic topic;
     Long statementId;
 }

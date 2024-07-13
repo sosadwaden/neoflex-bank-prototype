@@ -1,7 +1,7 @@
 package com.sosadwaden.deal.controller;
 
 import com.sosadwaden.deal.dto.EmailMessage;
-import com.sosadwaden.deal.dto.Theme;
+import com.sosadwaden.deal.dto.Topic;
 import com.sosadwaden.deal.kafka.EmailProducer;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -23,8 +23,8 @@ public class DocumentController {
             @Parameter(description = "ID заявления", required = true) @PathVariable Long statementId,
             @Parameter(description = "Сообщение электронной почты", required = true) @RequestBody EmailMessage emailMessage) {
         emailMessage.setStatementId(statementId);
-        emailMessage.setTheme(Theme.SEND_DOCUMENTS);
-        emailProducer.sendMessage("send-documents", emailMessage);
+        emailMessage.setTopic(Topic.SEND_DOCUMENTS);
+        emailProducer.sendMessage(Topic.SEND_DOCUMENTS.name(), emailMessage);
     }
 
     @Operation(summary = "Запрос на подписание документов")
@@ -33,8 +33,8 @@ public class DocumentController {
             @Parameter(description = "ID заявления", required = true) @PathVariable Long statementId,
             @Parameter(description = "Сообщение электронной почты", required = true) @RequestBody EmailMessage emailMessage) {
         emailMessage.setStatementId(statementId);
-        emailMessage.setTheme(Theme.SEND_SES);
-        emailProducer.sendMessage("send-ses", emailMessage);
+        emailMessage.setTopic(Topic.SEND_SES);
+        emailProducer.sendMessage(Topic.SEND_SES.name(), emailMessage);
     }
 
     @Operation(summary = "Подписание документов")
@@ -43,8 +43,7 @@ public class DocumentController {
             @Parameter(description = "ID заявления", required = true) @PathVariable Long statementId,
             @Parameter(description = "Сообщение электронной почты", required = true) @RequestBody EmailMessage emailMessage) {
         emailMessage.setStatementId(statementId);
-        emailMessage.setTheme(Theme.CREDIT_ISSUED);
-        emailProducer.sendMessage("credit-issued", emailMessage);
+        emailMessage.setTopic(Topic.CREDIT_ISSUED);
+        emailProducer.sendMessage(Topic.CREDIT_ISSUED.name(), emailMessage);
     }
-
 }

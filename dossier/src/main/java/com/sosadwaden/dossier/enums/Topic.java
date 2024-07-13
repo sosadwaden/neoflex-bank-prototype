@@ -1,6 +1,6 @@
 package com.sosadwaden.dossier.enums;
 
-public enum Theme {
+public enum Topic {
     FINISH_REGISTRATION,
     CREATE_DOCUMENTS,
     SEND_DOCUMENTS,
