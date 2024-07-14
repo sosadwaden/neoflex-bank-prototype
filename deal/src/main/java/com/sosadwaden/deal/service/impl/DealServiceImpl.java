@@ -80,7 +80,6 @@ public class DealServiceImpl implements DealService {
                 .changeType(ChangeType.MANUAL)
                 .build());
 
-        statement.setStatus(ApplicationStatus.APPROVED);
         statement.setAppliedOffer(appliedOffer);
         statement.setStatus(ApplicationStatus.APPROVED);
 
