@@ -12,3 +12,8 @@ application:
   endpoint:
     offers: "/offers"
     calc: "/calc"
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:4410/eureka/

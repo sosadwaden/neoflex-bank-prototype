@@ -47,5 +47,6 @@
         <module>statement</module>
         <module>dossier</module>
         <module>gateway</module>
+        <module>eureka-server</module>
     </modules>
 </project>
