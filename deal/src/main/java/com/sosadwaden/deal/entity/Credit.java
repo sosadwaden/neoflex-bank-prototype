@@ -53,7 +53,6 @@ public class Credit {
     @Enumerated(EnumType.STRING)
     CreditStatus creditStatus;
 
-    @Builder.Default
-    @OneToMany(mappedBy = "credit")
-    List<Statement> statements = new ArrayList<>();
+    @OneToOne(mappedBy = "credit")
+    Statement statement;
 }

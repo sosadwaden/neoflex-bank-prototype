@@ -138,7 +138,7 @@ public class DealServiceImpl implements DealService {
         Credit credit = creditMapper.creditDtoToCredit(creditDto);
 
         credit.setCreditStatus(CreditStatus.CALCULATED);
-        credit.getStatements().add(statement);
+        credit.setStatement(statement);
 
         statement.setStatus(ApplicationStatus.CC_APPROVED);
         statement.setCredit(credit);

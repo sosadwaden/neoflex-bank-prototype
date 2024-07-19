@@ -36,11 +36,11 @@ public class Statement {
     )
     UUID statementId;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "client_id")
     Client client;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "credit_id")
     Credit credit;
 
