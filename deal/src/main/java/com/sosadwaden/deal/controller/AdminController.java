@@ -1,6 +1,6 @@
 package com.sosadwaden.deal.controller;
 
-import com.sosadwaden.deal.entity.Statement;
+import com.sosadwaden.deal.dto.statement.StatementDto;
 import com.sosadwaden.deal.service.AdminDealService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -31,11 +31,12 @@ public class AdminController {
     @Operation(summary = "Получить заявку по id")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Заявка получена успешно"),
+            @ApiResponse(responseCode = "404", description = "Statement не найден")
     })
     @GetMapping("/statement/{statementId}")
-    public ResponseEntity<Statement> getStatement(@PathVariable UUID statementId) {
+    public ResponseEntity<StatementDto> getStatement(@PathVariable UUID statementId) {
         logger.info("Запрос на /deal/admin/statement/{statementId} с id: {}", statementId);
-        Statement response = adminDealService.getStatement(statementId);
+        StatementDto response = adminDealService.getStatement(statementId);
 
         logger.info("Ответ от /deal/admin/statement/{statementId}: {}", response);
         return new ResponseEntity<>(response, HttpStatus.OK);
@@ -45,10 +46,10 @@ public class AdminController {
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Заявки успешно получены"),
     })
-    @GetMapping
-    public ResponseEntity<List<Statement>> getStatements() {
+    @GetMapping("/statement")
+    public ResponseEntity<List<StatementDto>> getStatements() {
         logger.info("Запрос на /deal/admin/statement");
-        List<Statement> response = adminDealService.getStatements();
+        List<StatementDto> response = adminDealService.getStatements();
 
         logger.info("Ответ от /deal/admin/statement: {}", response);
         return new ResponseEntity<>(response, HttpStatus.OK);
