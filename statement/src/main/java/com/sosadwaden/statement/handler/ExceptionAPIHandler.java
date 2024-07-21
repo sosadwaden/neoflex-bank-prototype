@@ -30,6 +30,7 @@ public class ExceptionAPIHandler {
                 .collect(Collectors.toList());
 
         logger.error("Ошибка валидации: {}", errors);
+        logger.debug("Детали исключения: {}", exception);
         return new ResponseEntity<>(ValidationErrorResponse.builder().errors(errors).build(), HttpStatus.BAD_REQUEST);
     }
 }
