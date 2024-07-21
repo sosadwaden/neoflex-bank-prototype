@@ -38,7 +38,7 @@ public class CalculatorController {
     }
 
     /**
-     *  Расчёт возможных условий кредита
+     * Расчёт возможных условий кредита
      * @param request
      * @return List<LoanOfferDto>
      */

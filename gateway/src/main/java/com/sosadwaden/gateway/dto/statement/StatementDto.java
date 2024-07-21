@@ -1,4 +1,4 @@
-package com.sosadwaden.deal.dto.statement;
+package com.sosadwaden.gateway.dto.statement;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;

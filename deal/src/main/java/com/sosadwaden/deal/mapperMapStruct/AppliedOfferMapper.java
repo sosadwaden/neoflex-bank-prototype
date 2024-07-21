@@ -1,6 +1,7 @@
 package com.sosadwaden.deal.mapperMapStruct;
 
 import com.sosadwaden.deal.dto.LoanOfferDto;
+import com.sosadwaden.deal.dto.statement.AppliedOfferDto;
 import com.sosadwaden.deal.entity.jsonb_entity.AppliedOffer;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
@@ -19,4 +20,6 @@ public interface AppliedOfferMapper {
     @Mapping(source = "isInsuranceEnabled", target = "isInsuranceEnabled")
     @Mapping(source = "isSalaryClient", target = "isSalaryClient")
     AppliedOffer loanOfferDtoToAppliedOffer(LoanOfferDto dto);
+
+    AppliedOfferDto toDto(AppliedOffer appliedOffer);
 }

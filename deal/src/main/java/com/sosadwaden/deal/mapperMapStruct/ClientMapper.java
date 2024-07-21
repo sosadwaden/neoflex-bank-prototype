@@ -25,7 +25,7 @@ public interface ClientMapper {
     @Mapping(target = "maritalStatus",ignore = true)
     @Mapping(target = "dependentAmount",ignore = true)
     @Mapping(target = "accountNumber",ignore = true)
-    @Mapping(target = "statements",ignore = true)
+    @Mapping(target = "statement",ignore = true)
     Client loanStatementRequestDtoToClient(LoanStatementRequestDto request);
 
     default Passport mapToPassport(LoanStatementRequestDto request) {
