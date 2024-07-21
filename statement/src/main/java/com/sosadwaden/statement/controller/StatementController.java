@@ -6,6 +6,7 @@ import com.sosadwaden.statement.service.StatementService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 import java.util.List;
 
+@Tag(name = "Statement controller", description = "Контроллер для путей /statement")
 @RequiredArgsConstructor
 @Validated
 @RequestMapping("/statement")

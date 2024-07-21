@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/deal/document")
-@Tag(name = "Document API", description = "API для работы с документами")
+@Tag(name = "Document controller", description = "Контроллер для работы с документами по адресу /deal/document")
 public class DocumentController {
 
     @Autowired

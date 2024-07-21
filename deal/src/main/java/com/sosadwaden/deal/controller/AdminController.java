@@ -19,9 +19,9 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 import java.util.UUID;
 
+@Tag(name = "Admin controller", description = "Контроллер для путей /deal/admin")
 @RequiredArgsConstructor
 @RequestMapping("/deal/admin")
-@Tag(name = "Admin API", description = "Admin API для работы с заявками")
 @RestController
 public class AdminController {
 
