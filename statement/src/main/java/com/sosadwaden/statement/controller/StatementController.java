@@ -46,13 +46,11 @@ public class StatementController {
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
-    @Operation(
-            summary = "Выбор одного из предложений"
-    )
+    @Operation(summary = "Выбор одного из предложений")
     @PostMapping("${application.endpoint.offer}")
     public ResponseEntity<Void> offer(@RequestBody LoanOfferDto request) {
-        statementService.offer(request);
         logger.info("Запрос на /statement/offer: {}", request);
+        statementService.offer(request);
 
         return ResponseEntity.status(HttpStatus.OK).build();
     }
