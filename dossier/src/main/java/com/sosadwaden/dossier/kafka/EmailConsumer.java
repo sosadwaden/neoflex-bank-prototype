@@ -51,7 +51,7 @@ public class EmailConsumer {
         try {
             SimpleMailMessage mailMessage = new SimpleMailMessage();
             mailMessage.setTo(message.getAddress());
-            mailMessage.setSubject(String.valueOf(message.getTheme()));
+            mailMessage.setSubject(String.valueOf(message.getTopic()));
             mailMessage.setText("Ваше заявление " + message.getStatementId() + " обработано.");
             mailSender.send(mailMessage);
             logger.info("Электронное письмо отправлено по адресу {}", message.getAddress());
