@@ -1,10 +1,12 @@
 package com.sosadwaden.deal.dto.statement;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import java.time.LocalDate;
 
+@Schema(description = "DTO для представления паспортных данных")
 @Getter
 @Setter
 @ToString

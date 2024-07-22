@@ -1,6 +1,7 @@
 package com.sosadwaden.deal.dto.statement;
 
 import com.sosadwaden.deal.dto.PaymentScheduleElementDto;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -8,6 +9,7 @@ import java.math.BigDecimal;
 import java.util.List;
 import java.util.UUID;
 
+@Schema(description = "DTO для представления кредита")
 @Getter
 @Setter
 @ToString

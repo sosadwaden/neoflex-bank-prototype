@@ -1,5 +1,6 @@
 package com.sosadwaden.gateway.dto.statement;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -7,6 +8,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 
+@Schema(description = "DTO для представления заявки на кредит")
 @Getter
 @Setter
 @ToString

@@ -1,11 +1,13 @@
 package com.sosadwaden.deal.dto.statement;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import java.time.LocalDate;
 import java.util.UUID;
 
+@Schema(description = "DTO для представления информации о клиенте")
 @Getter
 @Setter
 @ToString
