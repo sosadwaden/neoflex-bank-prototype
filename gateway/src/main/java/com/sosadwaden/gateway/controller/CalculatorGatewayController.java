@@ -47,10 +47,13 @@ public class CalculatorGatewayController {
     })
     @PostMapping("/offers")
     public ResponseEntity<List<LoanOfferDto>> offers(@Valid @RequestBody LoanStatementRequestDto request) {
+        long startTime = System.currentTimeMillis();
         logger.info("Запрос в Gateway по адресу /calculator/offers: {}", request);
+
         List<LoanOfferDto> response = calculatorServiceClient.offers(request);
 
-        logger.info("Ответ от Gateway по адресу /calculator/offers: {}", response);
+        long duration = System.currentTimeMillis() - startTime;
+        logger.info("Ответ от Gateway по адресу /calculator/offers: {}, (время выполнения: {} ms)", response, duration);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
@@ -68,10 +71,13 @@ public class CalculatorGatewayController {
     })
     @PostMapping("/calc")
     public ResponseEntity<CreditDto> calc(@Valid @RequestBody ScoringDataDto request) {
+        long startTime = System.currentTimeMillis();
         logger.info("Запрос в Gateway по адресу /calculator/calc: {}", request);
+
         CreditDto response = calculatorServiceClient.calc(request);
 
-        logger.info("Ответ от Gateway по адресу /calculator/calc: {}", response);
+        long duration = System.currentTimeMillis() - startTime;
+        logger.info("Ответ от Gateway по адресу /calculator/calc: {}, (время выполнения: {} ms)", response, duration);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 }

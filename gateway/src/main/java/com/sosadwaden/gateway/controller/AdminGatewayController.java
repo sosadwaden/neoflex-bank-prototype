@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Tag(name = "Gateway Admin API", description = "Gateway Controller для перенаправления запросов на /deal/admin")
 @Validated
@@ -41,10 +42,13 @@ public class AdminGatewayController {
     })
     @GetMapping("/statement/{statementId}")
     public ResponseEntity<StatementDto> getStatement(@PathVariable UUID statementId) {
+        long startTime = System.currentTimeMillis();
         logger.info("Запрос в Gateway по адресу /deal/admin/statement/{statementId} с id: {}", statementId);
+
         StatementDto response = adminDealServiceClient.getStatement(statementId);
 
-        logger.info("Ответ от Gateway по адресу /deal/admin/statement/{statementId}: {}", response);
+        long duration = System.currentTimeMillis() - startTime;
+        logger.info("Ответ от Gateway по адресу /deal/admin/statement: {}, (время выполнения: {} ms)", response, duration);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
@@ -54,10 +58,18 @@ public class AdminGatewayController {
     })
     @GetMapping("/statement")
     public ResponseEntity<List<StatementDto>> getStatements() {
+        long startTime = System.currentTimeMillis();
         logger.info("Запрос в Gateway по адресу /deal/admin/statement");
+
         List<StatementDto> response = adminDealServiceClient.getStatements();
 
-        logger.info("Ответ от Gateway по адресу /deal/admin/statement: {}", response);
+        long duration = System.currentTimeMillis() - startTime;
+        logger.info("Ответ от Gateway по адресу /deal/admin/statement, количество заявок: {}, (время выполнения: {} ms)", response.size(), duration);
+
+        if (logger.isDebugEnabled()) {
+            logger.debug("Детали заявок: {}", response.stream().map(StatementDto::getStatementId).collect(Collectors.toList()));
+        }
+
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 }

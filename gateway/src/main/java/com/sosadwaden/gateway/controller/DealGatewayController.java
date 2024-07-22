@@ -41,10 +41,13 @@ public class DealGatewayController {
     })
     @PostMapping("/statement")
     public ResponseEntity<List<LoanOfferDto>> statement(@RequestBody LoanStatementRequestDto request) {
+        long startTime = System.currentTimeMillis();
         logger.info("Запрос в Gateway по адресу /deal/statement: {}", request);
+
         List<LoanOfferDto> response = dealServiceClient.statement(request);
 
-        logger.info("Ответ от Gateway по адресу /deal/statement: {}", response);
+        long duration = System.currentTimeMillis() - startTime;
+        logger.info("Ответ от Gateway по адресу /deal/statement: {}, (время выполнения: {} ms)", response, duration);
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 
@@ -59,8 +62,14 @@ public class DealGatewayController {
     })
     @PostMapping("/offer/select")
     public ResponseEntity<Void> select(@RequestBody LoanOfferDto request) {
+        long startTime = System.currentTimeMillis();
         logger.info("Запрос в Gateway по адресу /deal/offer/select: {}", request);
+
         dealServiceClient.select(request);
+
+        long duration = System.currentTimeMillis() - startTime;
+        logger.info("Gateway, запрос по адресу /deal/offer/select выполнен; (время выполнения: {} ms)", duration);
+
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
 
@@ -75,8 +84,14 @@ public class DealGatewayController {
     @PostMapping("/calculate/{statementId}")
     public ResponseEntity<Void> calculate(@PathVariable String statementId,
                                           @RequestBody FinishRegistrationRequestDto request) {
+        long startTime = System.currentTimeMillis();
         logger.info("Запрос в Gateway по адресу /deal/calculate: {}", request);
+
         dealServiceClient.calculate(request, statementId);
+
+        long duration = System.currentTimeMillis() - startTime;
+        logger.info("Gateway, запрос по адресу /calculator/offers выполнен; (время выполнения: {} ms)", duration);
+
         return ResponseEntity.status(HttpStatus.OK).build();
     }
 }

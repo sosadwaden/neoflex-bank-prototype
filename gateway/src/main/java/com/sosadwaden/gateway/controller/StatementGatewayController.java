@@ -45,18 +45,27 @@ public class StatementGatewayController {
     })
     @PostMapping
     public ResponseEntity<List<LoanOfferDto>> calculationOfPossibleLoanTerms(@Valid @RequestBody LoanStatementRequestDto request) {
+        long startTime = System.currentTimeMillis();
         logger.info("Запрос в Gateway по адресу /statement: {}", request);
         List<LoanOfferDto> response = statementServiceClient.calculationOfPossibleLoanTerms(request);
 
-        logger.info("Ответ от Gateway по адресу /statement: {}", response);
+        long duration = System.currentTimeMillis() - startTime;
+        logger.info("Ответ от Gateway по адресу /statement: {}, (время выполнения: {} ms)", response, duration);
+
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
     @Operation(summary = "Выбор одного из предложений")
     @PostMapping("/offer")
     public ResponseEntity<Void> offer(@RequestBody LoanOfferDto request) {
+        long startTime = System.currentTimeMillis();
         logger.info("Запрос в Gateway по адресу /statement/offer: {}", request);
+
         statementServiceClient.offer(request);
+
+        long duration = System.currentTimeMillis() - startTime;
+        logger.info("Gateway, запрос по адресу /deal/admin/statement выполнен; (время выполнения: {} ms)", duration);
+
         return ResponseEntity.status(HttpStatus.OK).build();
     }
 }

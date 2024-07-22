@@ -35,10 +35,14 @@ public class AdminController {
     })
     @GetMapping("/statement/{statementId}")
     public ResponseEntity<StatementDto> getStatement(@PathVariable UUID statementId) {
+        long startTime = System.currentTimeMillis();
         logger.info("Запрос на /deal/admin/statement/{statementId} с id: {}", statementId);
+
         StatementDto response = adminDealService.getStatement(statementId);
 
-        logger.info("Ответ от /deal/admin/statement/{statementId}: {}", response);
+        long duration = System.currentTimeMillis() - startTime;
+        logger.info("Ответ от /deal/admin/statement/{statementId}: {}, (время выполнения: {} ms)", response, duration);
+
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
@@ -48,10 +52,14 @@ public class AdminController {
     })
     @GetMapping("/statement")
     public ResponseEntity<List<StatementDto>> getStatements() {
+        long startTime = System.currentTimeMillis();
         logger.info("Запрос на /deal/admin/statement");
+
         List<StatementDto> response = adminDealService.getStatements();
 
-        logger.info("Ответ от /deal/admin/statement: {}", response);
+        long duration = System.currentTimeMillis() - startTime;
+        logger.info("Ответ от /deal/admin/statement, количество заявок: {}, (время выполнения: {} ms)", response.size(), duration);
+
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 }

@@ -1,195 +1,309 @@
-2024-06-20 01:11:42 - Starting CalculatorApplication using Java 17.0.9 on DESKTOP-VUNRAED with PID 2428 (F:\Work\neoflex-bank-prototype\calculator\target\classes started by Кирилл in F:\Work\neoflex-bank-prototype)
-2024-06-20 01:11:42 - Running with Spring Boot v2.7.18, Spring v5.3.31
-2024-06-20 01:11:42 - No active profile set, falling back to 1 default profile: "default"
-2024-06-20 01:11:43 - Tomcat initialized with port(s): 4455 (http)
-2024-06-20 01:11:43 - Starting service [Tomcat]
-2024-06-20 01:11:43 - Starting Servlet engine: [Apache Tomcat/9.0.83]
-2024-06-20 01:11:43 - Initializing Spring embedded WebApplicationContext
-2024-06-20 01:11:43 - Root WebApplicationContext: initialization completed in 1030 ms
-2024-06-20 01:11:44 - Tomcat started on port(s): 4455 (http) with context path ''
-2024-06-20 01:11:44 - Started CalculatorApplication in 1.95 seconds (JVM running for 2.388)
-2024-06-20 01:25:22 - Starting CalculatorApplication using Java 17.0.9 on DESKTOP-VUNRAED with PID 18116 (F:\Work\neoflex-bank-prototype\calculator\target\classes started by Кирилл in F:\Work\neoflex-bank-prototype)
-2024-06-20 01:25:22 - Running with Spring Boot v2.7.18, Spring v5.3.31
-2024-06-20 01:25:22 - No active profile set, falling back to 1 default profile: "default"
-2024-06-20 01:25:23 - Tomcat initialized with port(s): 4455 (http)
-2024-06-20 01:25:23 - Starting service [Tomcat]
-2024-06-20 01:25:23 - Starting Servlet engine: [Apache Tomcat/9.0.83]
-2024-06-20 01:25:23 - Initializing Spring embedded WebApplicationContext
-2024-06-20 01:25:23 - Root WebApplicationContext: initialization completed in 665 ms
-2024-06-20 01:25:23 - Tomcat started on port(s): 4455 (http) with context path ''
-2024-06-20 01:25:23 - Started CalculatorApplication in 1.597 seconds (JVM running for 2.002)
-2024-06-20 01:25:33 - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-06-20 01:25:33 - Initializing Servlet 'dispatcherServlet'
-2024-06-20 01:25:33 - Completed initialization in 0 ms
-2024-06-20 01:25:33 - Полученный запрос: LoanStatementRequestDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, email=test@gmail.com, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111)
-2024-06-20 01:25:33 - Начало генерации List<LoanOfferDto> по запросу: LoanStatementRequestDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, email=test@gmail.com, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111)
-2024-06-20 01:25:33 - Полученный monthlyPayment: 4728.6884932934
-2024-06-20 01:25:33 - Полученный psk: 33100.8194530538
-2024-06-20 01:25:33 - Полученный monthlyPayment: 4698.2411007125
-2024-06-20 01:25:33 - Полученный psk: 32887.6877049875
-2024-06-20 01:25:33 - Полученный monthlyPayment: 4683.0534398013
-2024-06-20 01:25:33 - Полученный psk: 32781.3740786091
-2024-06-20 01:25:33 - Полученный monthlyPayment: 4652.7503471827
-2024-06-20 01:25:33 - Полученный psk: 32569.2524302789
-2024-06-20 01:25:33 - Сгенерированный List<LoanOfferDto>: [LoanOfferDto(statementId=b8f537a8-1020-4d58-956d-a1b4ce98c9ef, requestedAmount=31000, totalAmount=33100.8194530538, term=7, monthlyPayment=4728.6884932934, rate=0.20, isInsuranceEnabled=false, isSalaryClient=false), LoanOfferDto(statementId=f9822b61-fa5e-4975-81c6-8207e2fd3c07, requestedAmount=31000, totalAmount=32887.6877049875, term=7, monthlyPayment=4698.2411007125, rate=0.18, isInsuranceEnabled=true, isSalaryClient=false), LoanOfferDto(statementId=fc06d7f3-1b7c-4170-994f-348fffdd20ec, requestedAmount=31000, totalAmount=32781.3740786091, term=7, monthlyPayment=4683.0534398013, rate=0.17, isInsuranceEnabled=false, isSalaryClient=true), LoanOfferDto(statementId=2c48173e-b581-446f-9691-90356939699c, requestedAmount=31000, totalAmount=32569.2524302789, term=7, monthlyPayment=4652.7503471827, rate=0.15, isInsuranceEnabled=true, isSalaryClient=true)]
-2024-06-20 01:25:33 - Завершена генерация List<LoanOfferDto> по запросу: LoanStatementRequestDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, email=test@gmail.com, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111)
-2024-06-20 01:25:33 - Сгенерированный ответ: [LoanOfferDto(statementId=b8f537a8-1020-4d58-956d-a1b4ce98c9ef, requestedAmount=31000, totalAmount=33100.8194530538, term=7, monthlyPayment=4728.6884932934, rate=0.20, isInsuranceEnabled=false, isSalaryClient=false), LoanOfferDto(statementId=f9822b61-fa5e-4975-81c6-8207e2fd3c07, requestedAmount=31000, totalAmount=32887.6877049875, term=7, monthlyPayment=4698.2411007125, rate=0.18, isInsuranceEnabled=true, isSalaryClient=false), LoanOfferDto(statementId=fc06d7f3-1b7c-4170-994f-348fffdd20ec, requestedAmount=31000, totalAmount=32781.3740786091, term=7, monthlyPayment=4683.0534398013, rate=0.17, isInsuranceEnabled=false, isSalaryClient=true), LoanOfferDto(statementId=2c48173e-b581-446f-9691-90356939699c, requestedAmount=31000, totalAmount=32569.2524302789, term=7, monthlyPayment=4652.7503471827, rate=0.15, isInsuranceEnabled=true, isSalaryClient=true)]
-2024-06-20 01:26:10 - Полученный запрос: LoanStatementRequestDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, email=test@gmail.com, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111)
-2024-06-20 01:26:10 - Начало генерации List<LoanOfferDto> по запросу: LoanStatementRequestDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, email=test@gmail.com, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111)
-2024-06-20 01:26:10 - Полученный monthlyPayment: 4728.6884932934
-2024-06-20 01:26:10 - Полученный psk: 33100.8194530538
-2024-06-20 01:26:10 - Полученный monthlyPayment: 4698.2411007125
-2024-06-20 01:26:10 - Полученный psk: 32887.6877049875
-2024-06-20 01:26:10 - Полученный monthlyPayment: 4683.0534398013
-2024-06-20 01:26:10 - Полученный psk: 32781.3740786091
-2024-06-20 01:26:10 - Полученный monthlyPayment: 4652.7503471827
-2024-06-20 01:26:10 - Полученный psk: 32569.2524302789
-2024-06-20 01:26:10 - Сгенерированный List<LoanOfferDto>: [LoanOfferDto(statementId=95199547-72e9-464d-82a6-8545e2b4a2fc, requestedAmount=31000, totalAmount=33100.8194530538, term=7, monthlyPayment=4728.6884932934, rate=0.20, isInsuranceEnabled=false, isSalaryClient=false), LoanOfferDto(statementId=d8a01310-97d3-4cd7-84e9-9b1c95722fda, requestedAmount=31000, totalAmount=32887.6877049875, term=7, monthlyPayment=4698.2411007125, rate=0.18, isInsuranceEnabled=true, isSalaryClient=false), LoanOfferDto(statementId=4000159e-22ea-4805-b8f7-54f52d23b3aa, requestedAmount=31000, totalAmount=32781.3740786091, term=7, monthlyPayment=4683.0534398013, rate=0.17, isInsuranceEnabled=false, isSalaryClient=true), LoanOfferDto(statementId=96792565-9d48-4b18-af3e-31ab24f258f5, requestedAmount=31000, totalAmount=32569.2524302789, term=7, monthlyPayment=4652.7503471827, rate=0.15, isInsuranceEnabled=true, isSalaryClient=true)]
-2024-06-20 01:26:10 - Завершена генерация List<LoanOfferDto> по запросу: LoanStatementRequestDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, email=test@gmail.com, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111)
-2024-06-20 01:26:10 - Сгенерированный ответ: [LoanOfferDto(statementId=95199547-72e9-464d-82a6-8545e2b4a2fc, requestedAmount=31000, totalAmount=33100.8194530538, term=7, monthlyPayment=4728.6884932934, rate=0.20, isInsuranceEnabled=false, isSalaryClient=false), LoanOfferDto(statementId=d8a01310-97d3-4cd7-84e9-9b1c95722fda, requestedAmount=31000, totalAmount=32887.6877049875, term=7, monthlyPayment=4698.2411007125, rate=0.18, isInsuranceEnabled=true, isSalaryClient=false), LoanOfferDto(statementId=4000159e-22ea-4805-b8f7-54f52d23b3aa, requestedAmount=31000, totalAmount=32781.3740786091, term=7, monthlyPayment=4683.0534398013, rate=0.17, isInsuranceEnabled=false, isSalaryClient=true), LoanOfferDto(statementId=96792565-9d48-4b18-af3e-31ab24f258f5, requestedAmount=31000, totalAmount=32569.2524302789, term=7, monthlyPayment=4652.7503471827, rate=0.15, isInsuranceEnabled=true, isSalaryClient=true)]
-2024-06-20 01:26:25 - Полученный запрос: ScoringDataDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, gender=null, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111, passportIssueDate=2014-11-21, passportIssueBranch=MOSCOW, maritalStatus=MARRIED, dependentAmount=0, employment=EmploymentDto(employmentStatus=EMPLOYED, employerINN=1234567890, salary=60000, employmentPosition=null, workExperienceTotal=24, workExperienceCurrent=24), accountNumber=hi, isInsuranceEnabled=false, isSalaryClient=false)
-2024-06-20 01:26:25 - Начало генерации CreditDto по запросу: ScoringDataDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, gender=null, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111, passportIssueDate=2014-11-21, passportIssueBranch=MOSCOW, maritalStatus=MARRIED, dependentAmount=0, employment=EmploymentDto(employmentStatus=EMPLOYED, employerINN=1234567890, salary=60000, employmentPosition=null, workExperienceTotal=24, workExperienceCurrent=24), accountNumber=hi, isInsuranceEnabled=false, isSalaryClient=false)
-2024-06-20 01:26:25 - Начало скоринга для запроса: ScoringDataDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, gender=null, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111, passportIssueDate=2014-11-21, passportIssueBranch=MOSCOW, maritalStatus=MARRIED, dependentAmount=0, employment=EmploymentDto(employmentStatus=EMPLOYED, employerINN=1234567890, salary=60000, employmentPosition=null, workExperienceTotal=24, workExperienceCurrent=24), accountNumber=hi, isInsuranceEnabled=false, isSalaryClient=false)
-2024-06-20 01:26:25 - Скоринг успешно завершён для запроса: ScoringDataDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, gender=null, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111, passportIssueDate=2014-11-21, passportIssueBranch=MOSCOW, maritalStatus=MARRIED, dependentAmount=0, employment=EmploymentDto(employmentStatus=EMPLOYED, employerINN=1234567890, salary=60000, employmentPosition=null, workExperienceTotal=24, workExperienceCurrent=24), accountNumber=hi, isInsuranceEnabled=false, isSalaryClient=false)
-2024-06-20 01:26:25 - Результирующая ставка: 0.17
-2024-06-20 01:26:25 - Полученный monthlyPayment: 4683.0534398013
-2024-06-20 01:26:25 - Полученный psk: 32781.3740786091
-2024-06-20 01:26:25 - Полученный List<PaymentScheduleElementDto>: [PaymentScheduleElementDto(number=1, date=2024-07-20, totalPayment=4683.05, interestPayment=439.17, debtPayment=4243.89, remainingDebt=26756.11), PaymentScheduleElementDto(number=2, date=2024-08-20, totalPayment=4683.05, interestPayment=379.04, debtPayment=4304.01, remainingDebt=22452.10), PaymentScheduleElementDto(number=3, date=2024-09-20, totalPayment=4683.05, interestPayment=318.07, debtPayment=4364.98, remainingDebt=18087.12), PaymentScheduleElementDto(number=4, date=2024-10-20, totalPayment=4683.05, interestPayment=256.23, debtPayment=4426.82, remainingDebt=13660.30), PaymentScheduleElementDto(number=5, date=2024-11-20, totalPayment=4683.05, interestPayment=193.52, debtPayment=4489.53, remainingDebt=9170.77), PaymentScheduleElementDto(number=6, date=2024-12-20, totalPayment=4683.05, interestPayment=129.92, debtPayment=4553.13, remainingDebt=4617.64), PaymentScheduleElementDto(number=7, date=2025-01-20, totalPayment=4683.05, interestPayment=65.42, debtPayment=4617.64, remainingDebt=0.00)]
-2024-06-20 01:26:25 - Сгенерированный CreditDto: CreditDto(amount=31000, term=7, monthlyPayment=4683.0534398013, rate=0.17, psk=32781.3740786091, isInsuranceEnabled=false, isSalaryClient=false, paymentSchedule=[PaymentScheduleElementDto(number=1, date=2024-07-20, totalPayment=4683.05, interestPayment=439.17, debtPayment=4243.89, remainingDebt=26756.11), PaymentScheduleElementDto(number=2, date=2024-08-20, totalPayment=4683.05, interestPayment=379.04, debtPayment=4304.01, remainingDebt=22452.10), PaymentScheduleElementDto(number=3, date=2024-09-20, totalPayment=4683.05, interestPayment=318.07, debtPayment=4364.98, remainingDebt=18087.12), PaymentScheduleElementDto(number=4, date=2024-10-20, totalPayment=4683.05, interestPayment=256.23, debtPayment=4426.82, remainingDebt=13660.30), PaymentScheduleElementDto(number=5, date=2024-11-20, totalPayment=4683.05, interestPayment=193.52, debtPayment=4489.53, remainingDebt=9170.77), PaymentScheduleElementDto(number=6, date=2024-12-20, totalPayment=4683.05, interestPayment=129.92, debtPayment=4553.13, remainingDebt=4617.64), PaymentScheduleElementDto(number=7, date=2025-01-20, totalPayment=4683.05, interestPayment=65.42, debtPayment=4617.64, remainingDebt=0.00)])
-2024-06-20 01:26:25 - Завершена генерация CreditDto по запросу: ScoringDataDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, gender=null, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111, passportIssueDate=2014-11-21, passportIssueBranch=MOSCOW, maritalStatus=MARRIED, dependentAmount=0, employment=EmploymentDto(employmentStatus=EMPLOYED, employerINN=1234567890, salary=60000, employmentPosition=null, workExperienceTotal=24, workExperienceCurrent=24), accountNumber=hi, isInsuranceEnabled=false, isSalaryClient=false)
-2024-06-20 01:26:25 - Сгенерированный ответ: CreditDto(amount=31000, term=7, monthlyPayment=4683.0534398013, rate=0.17, psk=32781.3740786091, isInsuranceEnabled=false, isSalaryClient=false, paymentSchedule=[PaymentScheduleElementDto(number=1, date=2024-07-20, totalPayment=4683.05, interestPayment=439.17, debtPayment=4243.89, remainingDebt=26756.11), PaymentScheduleElementDto(number=2, date=2024-08-20, totalPayment=4683.05, interestPayment=379.04, debtPayment=4304.01, remainingDebt=22452.10), PaymentScheduleElementDto(number=3, date=2024-09-20, totalPayment=4683.05, interestPayment=318.07, debtPayment=4364.98, remainingDebt=18087.12), PaymentScheduleElementDto(number=4, date=2024-10-20, totalPayment=4683.05, interestPayment=256.23, debtPayment=4426.82, remainingDebt=13660.30), PaymentScheduleElementDto(number=5, date=2024-11-20, totalPayment=4683.05, interestPayment=193.52, debtPayment=4489.53, remainingDebt=9170.77), PaymentScheduleElementDto(number=6, date=2024-12-20, totalPayment=4683.05, interestPayment=129.92, debtPayment=4553.13, remainingDebt=4617.64), PaymentScheduleElementDto(number=7, date=2025-01-20, totalPayment=4683.05, interestPayment=65.42, debtPayment=4617.64, remainingDebt=0.00)])
-2024-06-20 01:36:16 - Starting CalculatorApplication using Java 17.0.9 on DESKTOP-VUNRAED with PID 20580 (F:\Work\neoflex-bank-prototype\calculator\target\classes started by Кирилл in F:\Work\neoflex-bank-prototype)
-2024-06-20 01:36:16 - Running with Spring Boot v2.7.18, Spring v5.3.31
-2024-06-20 01:36:16 - No active profile set, falling back to 1 default profile: "default"
-2024-06-20 01:36:17 - Tomcat initialized with port(s): 4455 (http)
-2024-06-20 01:36:17 - Starting service [Tomcat]
-2024-06-20 01:36:17 - Starting Servlet engine: [Apache Tomcat/9.0.83]
-2024-06-20 01:36:17 - Initializing Spring embedded WebApplicationContext
-2024-06-20 01:36:17 - Root WebApplicationContext: initialization completed in 725 ms
-2024-06-20 01:36:17 - Tomcat started on port(s): 4455 (http) with context path ''
-2024-06-20 01:36:17 - Started CalculatorApplication in 1.687 seconds (JVM running for 2.103)
-2024-06-20 01:37:10 - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-06-20 01:37:10 - Initializing Servlet 'dispatcherServlet'
-2024-06-20 01:37:10 - Completed initialization in 1 ms
-2024-06-20 01:37:10 - Полученный запрос: LoanStatementRequestDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, email=test@gmail.com, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111)
-2024-06-20 01:37:10 - Начало генерации List<LoanOfferDto> по запросу: LoanStatementRequestDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, email=test@gmail.com, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111)
-2024-06-20 01:37:10 - Полученный monthlyPayment: 4728.6884932934
-2024-06-20 01:37:10 - Полученный psk: 33100.8194530538
-2024-06-20 01:37:10 - Полученный monthlyPayment: 4698.2411007125
-2024-06-20 01:37:10 - Полученный psk: 32887.6877049875
-2024-06-20 01:37:10 - Полученный monthlyPayment: 4683.0534398013
-2024-06-20 01:37:10 - Полученный psk: 32781.3740786091
-2024-06-20 01:37:10 - Полученный monthlyPayment: 4652.7503471827
-2024-06-20 01:37:10 - Полученный psk: 32569.2524302789
-2024-06-20 01:37:10 - Сгенерированный List<LoanOfferDto>: [LoanOfferDto(statementId=43359baa-7916-4c97-883c-b92dbfbe46bb, requestedAmount=31000, totalAmount=33100.8194530538, term=7, monthlyPayment=4728.6884932934, rate=0.20, isInsuranceEnabled=false, isSalaryClient=false), LoanOfferDto(statementId=353bf75a-0a28-4ffc-ae9b-54959d54ad6f, requestedAmount=31000, totalAmount=32887.6877049875, term=7, monthlyPayment=4698.2411007125, rate=0.18, isInsuranceEnabled=true, isSalaryClient=false), LoanOfferDto(statementId=ac4e5e17-e8f6-4fc5-ba4a-72cb59a9309a, requestedAmount=31000, totalAmount=32781.3740786091, term=7, monthlyPayment=4683.0534398013, rate=0.17, isInsuranceEnabled=false, isSalaryClient=true), LoanOfferDto(statementId=c70709e9-9e1d-40c3-915d-f7de6571bfb5, requestedAmount=31000, totalAmount=32569.2524302789, term=7, monthlyPayment=4652.7503471827, rate=0.15, isInsuranceEnabled=true, isSalaryClient=true)]
-2024-06-20 01:37:10 - Завершена генерация List<LoanOfferDto> по запросу: LoanStatementRequestDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, email=test@gmail.com, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111)
-2024-06-20 01:37:10 - Сгенерированный ответ: [LoanOfferDto(statementId=43359baa-7916-4c97-883c-b92dbfbe46bb, requestedAmount=31000, totalAmount=33100.8194530538, term=7, monthlyPayment=4728.6884932934, rate=0.20, isInsuranceEnabled=false, isSalaryClient=false), LoanOfferDto(statementId=353bf75a-0a28-4ffc-ae9b-54959d54ad6f, requestedAmount=31000, totalAmount=32887.6877049875, term=7, monthlyPayment=4698.2411007125, rate=0.18, isInsuranceEnabled=true, isSalaryClient=false), LoanOfferDto(statementId=ac4e5e17-e8f6-4fc5-ba4a-72cb59a9309a, requestedAmount=31000, totalAmount=32781.3740786091, term=7, monthlyPayment=4683.0534398013, rate=0.17, isInsuranceEnabled=false, isSalaryClient=true), LoanOfferDto(statementId=c70709e9-9e1d-40c3-915d-f7de6571bfb5, requestedAmount=31000, totalAmount=32569.2524302789, term=7, monthlyPayment=4652.7503471827, rate=0.15, isInsuranceEnabled=true, isSalaryClient=true)]
-2024-06-20 01:37:36 - Полученный запрос: LoanStatementRequestDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, email=test@gmail.com, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111)
-2024-06-20 01:37:36 - Начало генерации List<LoanOfferDto> по запросу: LoanStatementRequestDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, email=test@gmail.com, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111)
-2024-06-20 01:37:36 - Полученный monthlyPayment: 4728.6884932934
-2024-06-20 01:37:36 - Полученный psk: 33100.8194530538
-2024-06-20 01:37:36 - Полученный monthlyPayment: 4698.2411007125
-2024-06-20 01:37:36 - Полученный psk: 32887.6877049875
-2024-06-20 01:37:36 - Полученный monthlyPayment: 4683.0534398013
-2024-06-20 01:37:36 - Полученный psk: 32781.3740786091
-2024-06-20 01:37:36 - Полученный monthlyPayment: 4652.7503471827
-2024-06-20 01:37:36 - Полученный psk: 32569.2524302789
-2024-06-20 01:37:36 - Сгенерированный List<LoanOfferDto>: [LoanOfferDto(statementId=26119f87-2e2f-43f2-8c6a-763c290ee55d, requestedAmount=31000, totalAmount=33100.8194530538, term=7, monthlyPayment=4728.6884932934, rate=0.20, isInsuranceEnabled=false, isSalaryClient=false), LoanOfferDto(statementId=4b4b38e9-a954-48fc-b486-aacd45bbaa5c, requestedAmount=31000, totalAmount=32887.6877049875, term=7, monthlyPayment=4698.2411007125, rate=0.18, isInsuranceEnabled=true, isSalaryClient=false), LoanOfferDto(statementId=ed0bf28b-3a9f-426d-baf5-78c1ba77b24f, requestedAmount=31000, totalAmount=32781.3740786091, term=7, monthlyPayment=4683.0534398013, rate=0.17, isInsuranceEnabled=false, isSalaryClient=true), LoanOfferDto(statementId=4546bc4c-1852-4cbe-b062-fb6552a8c37d, requestedAmount=31000, totalAmount=32569.2524302789, term=7, monthlyPayment=4652.7503471827, rate=0.15, isInsuranceEnabled=true, isSalaryClient=true)]
-2024-06-20 01:37:36 - Завершена генерация List<LoanOfferDto> по запросу: LoanStatementRequestDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, email=test@gmail.com, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111)
-2024-06-20 01:37:36 - Сгенерированный ответ: [LoanOfferDto(statementId=26119f87-2e2f-43f2-8c6a-763c290ee55d, requestedAmount=31000, totalAmount=33100.8194530538, term=7, monthlyPayment=4728.6884932934, rate=0.20, isInsuranceEnabled=false, isSalaryClient=false), LoanOfferDto(statementId=4b4b38e9-a954-48fc-b486-aacd45bbaa5c, requestedAmount=31000, totalAmount=32887.6877049875, term=7, monthlyPayment=4698.2411007125, rate=0.18, isInsuranceEnabled=true, isSalaryClient=false), LoanOfferDto(statementId=ed0bf28b-3a9f-426d-baf5-78c1ba77b24f, requestedAmount=31000, totalAmount=32781.3740786091, term=7, monthlyPayment=4683.0534398013, rate=0.17, isInsuranceEnabled=false, isSalaryClient=true), LoanOfferDto(statementId=4546bc4c-1852-4cbe-b062-fb6552a8c37d, requestedAmount=31000, totalAmount=32569.2524302789, term=7, monthlyPayment=4652.7503471827, rate=0.15, isInsuranceEnabled=true, isSalaryClient=true)]
-2024-06-20 01:43:20 - Starting CalculatorApplication using Java 17.0.9 on DESKTOP-VUNRAED with PID 18188 (F:\Work\neoflex-bank-prototype\calculator\target\classes started by Кирилл in F:\Work\neoflex-bank-prototype)
-2024-06-20 01:43:20 - Running with Spring Boot v2.7.18, Spring v5.3.31
-2024-06-20 01:43:20 - No active profile set, falling back to 1 default profile: "default"
-2024-06-20 01:43:21 - Tomcat initialized with port(s): 4455 (http)
-2024-06-20 01:43:21 - Starting service [Tomcat]
-2024-06-20 01:43:21 - Starting Servlet engine: [Apache Tomcat/9.0.83]
-2024-06-20 01:43:21 - Initializing Spring embedded WebApplicationContext
-2024-06-20 01:43:21 - Root WebApplicationContext: initialization completed in 764 ms
-2024-06-20 01:43:21 - Tomcat started on port(s): 4455 (http) with context path ''
-2024-06-20 01:43:21 - Started CalculatorApplication in 1.801 seconds (JVM running for 2.216)
-2024-06-20 01:43:37 - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-06-20 01:43:37 - Initializing Servlet 'dispatcherServlet'
-2024-06-20 01:43:37 - Completed initialization in 1 ms
-2024-06-20 01:43:37 - Полученный запрос: LoanStatementRequestDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, email=test@gmail.com, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111)
-2024-06-20 01:43:37 - Начало генерации List<LoanOfferDto> по запросу: LoanStatementRequestDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, email=test@gmail.com, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111)
-2024-06-20 01:43:37 - Полученный monthlyPayment: 4728.6884932934
-2024-06-20 01:43:37 - Полученный psk: 33100.8194530538
-2024-06-20 01:43:37 - Полученный monthlyPayment: 4698.2411007125
-2024-06-20 01:43:37 - Полученный psk: 32887.6877049875
-2024-06-20 01:43:37 - Полученный monthlyPayment: 4683.0534398013
-2024-06-20 01:43:37 - Полученный psk: 32781.3740786091
-2024-06-20 01:43:37 - Полученный monthlyPayment: 4652.7503471827
-2024-06-20 01:43:37 - Полученный psk: 32569.2524302789
-2024-06-20 01:43:37 - Сгенерированный List<LoanOfferDto>: [LoanOfferDto(statementId=9ba16c8a-e7fc-488b-b673-a9652dda0013, requestedAmount=31000, totalAmount=33100.8194530538, term=7, monthlyPayment=4728.6884932934, rate=0.20, isInsuranceEnabled=false, isSalaryClient=false), LoanOfferDto(statementId=9f3f7c4e-5950-417b-9410-eddf69bf962c, requestedAmount=31000, totalAmount=32887.6877049875, term=7, monthlyPayment=4698.2411007125, rate=0.18, isInsuranceEnabled=true, isSalaryClient=false), LoanOfferDto(statementId=3e2a6403-7828-46a0-807b-ff9266f4149a, requestedAmount=31000, totalAmount=32781.3740786091, term=7, monthlyPayment=4683.0534398013, rate=0.17, isInsuranceEnabled=false, isSalaryClient=true), LoanOfferDto(statementId=21d8fe4f-e3f7-43e6-85c2-94402368f991, requestedAmount=31000, totalAmount=32569.2524302789, term=7, monthlyPayment=4652.7503471827, rate=0.15, isInsuranceEnabled=true, isSalaryClient=true)]
-2024-06-20 01:43:37 - Завершена генерация List<LoanOfferDto> по запросу: LoanStatementRequestDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, email=test@gmail.com, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111)
-2024-06-20 01:43:37 - Сгенерированный ответ: [LoanOfferDto(statementId=9ba16c8a-e7fc-488b-b673-a9652dda0013, requestedAmount=31000, totalAmount=33100.8194530538, term=7, monthlyPayment=4728.6884932934, rate=0.20, isInsuranceEnabled=false, isSalaryClient=false), LoanOfferDto(statementId=9f3f7c4e-5950-417b-9410-eddf69bf962c, requestedAmount=31000, totalAmount=32887.6877049875, term=7, monthlyPayment=4698.2411007125, rate=0.18, isInsuranceEnabled=true, isSalaryClient=false), LoanOfferDto(statementId=3e2a6403-7828-46a0-807b-ff9266f4149a, requestedAmount=31000, totalAmount=32781.3740786091, term=7, monthlyPayment=4683.0534398013, rate=0.17, isInsuranceEnabled=false, isSalaryClient=true), LoanOfferDto(statementId=21d8fe4f-e3f7-43e6-85c2-94402368f991, requestedAmount=31000, totalAmount=32569.2524302789, term=7, monthlyPayment=4652.7503471827, rate=0.15, isInsuranceEnabled=true, isSalaryClient=true)]
-2024-06-20 01:43:48 - Полученный запрос: ScoringDataDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, gender=null, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111, passportIssueDate=2014-11-21, passportIssueBranch=MOSCOW, maritalStatus=MARRIED, dependentAmount=0, employment=EmploymentDto(employmentStatus=EMPLOYED, employerINN=1234567890, salary=60000, employmentPosition=null, workExperienceTotal=24, workExperienceCurrent=24), accountNumber=hi, isInsuranceEnabled=true, isSalaryClient=true)
-2024-06-20 01:43:48 - Начало генерации CreditDto по запросу: ScoringDataDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, gender=null, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111, passportIssueDate=2014-11-21, passportIssueBranch=MOSCOW, maritalStatus=MARRIED, dependentAmount=0, employment=EmploymentDto(employmentStatus=EMPLOYED, employerINN=1234567890, salary=60000, employmentPosition=null, workExperienceTotal=24, workExperienceCurrent=24), accountNumber=hi, isInsuranceEnabled=true, isSalaryClient=true)
-2024-06-20 01:43:48 - Начало скоринга для запроса: ScoringDataDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, gender=null, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111, passportIssueDate=2014-11-21, passportIssueBranch=MOSCOW, maritalStatus=MARRIED, dependentAmount=0, employment=EmploymentDto(employmentStatus=EMPLOYED, employerINN=1234567890, salary=60000, employmentPosition=null, workExperienceTotal=24, workExperienceCurrent=24), accountNumber=hi, isInsuranceEnabled=true, isSalaryClient=true)
-2024-06-20 01:43:48 - Скоринг успешно завершён для запроса: ScoringDataDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, gender=null, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111, passportIssueDate=2014-11-21, passportIssueBranch=MOSCOW, maritalStatus=MARRIED, dependentAmount=0, employment=EmploymentDto(employmentStatus=EMPLOYED, employerINN=1234567890, salary=60000, employmentPosition=null, workExperienceTotal=24, workExperienceCurrent=24), accountNumber=hi, isInsuranceEnabled=true, isSalaryClient=true)
-2024-06-20 01:43:48 - Результирующая ставка: 0.12
-2024-06-20 01:43:48 - Полученный monthlyPayment: 4607.4767703376
-2024-06-20 01:43:48 - Полученный psk: 32252.3373923632
-2024-06-20 01:43:48 - Полученный List<PaymentScheduleElementDto>: [PaymentScheduleElementDto(number=1, date=2024-07-20, totalPayment=4607.48, interestPayment=310.00, debtPayment=4297.48, remainingDebt=26702.52), PaymentScheduleElementDto(number=2, date=2024-08-20, totalPayment=4607.48, interestPayment=267.03, debtPayment=4340.45, remainingDebt=22362.07), PaymentScheduleElementDto(number=3, date=2024-09-20, totalPayment=4607.48, interestPayment=223.62, debtPayment=4383.86, remainingDebt=17978.22), PaymentScheduleElementDto(number=4, date=2024-10-20, totalPayment=4607.48, interestPayment=179.78, debtPayment=4427.69, remainingDebt=13550.52), PaymentScheduleElementDto(number=5, date=2024-11-20, totalPayment=4607.48, interestPayment=135.51, debtPayment=4471.97, remainingDebt=9078.55), PaymentScheduleElementDto(number=6, date=2024-12-20, totalPayment=4607.48, interestPayment=90.79, debtPayment=4516.69, remainingDebt=4561.86), PaymentScheduleElementDto(number=7, date=2025-01-20, totalPayment=4607.48, interestPayment=45.62, debtPayment=4561.86, remainingDebt=0.00)]
-2024-06-20 01:43:48 - Сгенерированный CreditDto: CreditDto(amount=31000, term=7, monthlyPayment=4607.4767703376, rate=0.12, psk=32252.3373923632, isInsuranceEnabled=true, isSalaryClient=true, paymentSchedule=[PaymentScheduleElementDto(number=1, date=2024-07-20, totalPayment=4607.48, interestPayment=310.00, debtPayment=4297.48, remainingDebt=26702.52), PaymentScheduleElementDto(number=2, date=2024-08-20, totalPayment=4607.48, interestPayment=267.03, debtPayment=4340.45, remainingDebt=22362.07), PaymentScheduleElementDto(number=3, date=2024-09-20, totalPayment=4607.48, interestPayment=223.62, debtPayment=4383.86, remainingDebt=17978.22), PaymentScheduleElementDto(number=4, date=2024-10-20, totalPayment=4607.48, interestPayment=179.78, debtPayment=4427.69, remainingDebt=13550.52), PaymentScheduleElementDto(number=5, date=2024-11-20, totalPayment=4607.48, interestPayment=135.51, debtPayment=4471.97, remainingDebt=9078.55), PaymentScheduleElementDto(number=6, date=2024-12-20, totalPayment=4607.48, interestPayment=90.79, debtPayment=4516.69, remainingDebt=4561.86), PaymentScheduleElementDto(number=7, date=2025-01-20, totalPayment=4607.48, interestPayment=45.62, debtPayment=4561.86, remainingDebt=0.00)])
-2024-06-20 01:43:48 - Завершена генерация CreditDto по запросу: ScoringDataDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, gender=null, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111, passportIssueDate=2014-11-21, passportIssueBranch=MOSCOW, maritalStatus=MARRIED, dependentAmount=0, employment=EmploymentDto(employmentStatus=EMPLOYED, employerINN=1234567890, salary=60000, employmentPosition=null, workExperienceTotal=24, workExperienceCurrent=24), accountNumber=hi, isInsuranceEnabled=true, isSalaryClient=true)
-2024-06-20 01:43:48 - Сгенерированный ответ: CreditDto(amount=31000, term=7, monthlyPayment=4607.4767703376, rate=0.12, psk=32252.3373923632, isInsuranceEnabled=true, isSalaryClient=true, paymentSchedule=[PaymentScheduleElementDto(number=1, date=2024-07-20, totalPayment=4607.48, interestPayment=310.00, debtPayment=4297.48, remainingDebt=26702.52), PaymentScheduleElementDto(number=2, date=2024-08-20, totalPayment=4607.48, interestPayment=267.03, debtPayment=4340.45, remainingDebt=22362.07), PaymentScheduleElementDto(number=3, date=2024-09-20, totalPayment=4607.48, interestPayment=223.62, debtPayment=4383.86, remainingDebt=17978.22), PaymentScheduleElementDto(number=4, date=2024-10-20, totalPayment=4607.48, interestPayment=179.78, debtPayment=4427.69, remainingDebt=13550.52), PaymentScheduleElementDto(number=5, date=2024-11-20, totalPayment=4607.48, interestPayment=135.51, debtPayment=4471.97, remainingDebt=9078.55), PaymentScheduleElementDto(number=6, date=2024-12-20, totalPayment=4607.48, interestPayment=90.79, debtPayment=4516.69, remainingDebt=4561.86), PaymentScheduleElementDto(number=7, date=2025-01-20, totalPayment=4607.48, interestPayment=45.62, debtPayment=4561.86, remainingDebt=0.00)])
-2024-06-20 01:49:16 - Полученный запрос: ScoringDataDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, gender=MALE, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111, passportIssueDate=2014-11-21, passportIssueBranch=MOSCOW, maritalStatus=MARRIED, dependentAmount=0, employment=EmploymentDto(employmentStatus=EMPLOYED, employerINN=1234567890, salary=60000, employmentPosition=null, workExperienceTotal=24, workExperienceCurrent=24), accountNumber=hi, isInsuranceEnabled=true, isSalaryClient=true)
-2024-06-20 01:49:16 - Начало генерации CreditDto по запросу: ScoringDataDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, gender=MALE, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111, passportIssueDate=2014-11-21, passportIssueBranch=MOSCOW, maritalStatus=MARRIED, dependentAmount=0, employment=EmploymentDto(employmentStatus=EMPLOYED, employerINN=1234567890, salary=60000, employmentPosition=null, workExperienceTotal=24, workExperienceCurrent=24), accountNumber=hi, isInsuranceEnabled=true, isSalaryClient=true)
-2024-06-20 01:49:16 - Начало скоринга для запроса: ScoringDataDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, gender=MALE, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111, passportIssueDate=2014-11-21, passportIssueBranch=MOSCOW, maritalStatus=MARRIED, dependentAmount=0, employment=EmploymentDto(employmentStatus=EMPLOYED, employerINN=1234567890, salary=60000, employmentPosition=null, workExperienceTotal=24, workExperienceCurrent=24), accountNumber=hi, isInsuranceEnabled=true, isSalaryClient=true)
-2024-06-20 01:49:16 - Скоринг успешно завершён для запроса: ScoringDataDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, gender=MALE, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111, passportIssueDate=2014-11-21, passportIssueBranch=MOSCOW, maritalStatus=MARRIED, dependentAmount=0, employment=EmploymentDto(employmentStatus=EMPLOYED, employerINN=1234567890, salary=60000, employmentPosition=null, workExperienceTotal=24, workExperienceCurrent=24), accountNumber=hi, isInsuranceEnabled=true, isSalaryClient=true)
-2024-06-20 01:49:16 - Результирующая ставка: 0.12
-2024-06-20 01:49:16 - Полученный monthlyPayment: 4607.4767703376
-2024-06-20 01:49:16 - Полученный psk: 32252.3373923632
-2024-06-20 01:49:16 - Полученный List<PaymentScheduleElementDto>: [PaymentScheduleElementDto(number=1, date=2024-07-20, totalPayment=4607.48, interestPayment=310.00, debtPayment=4297.48, remainingDebt=26702.52), PaymentScheduleElementDto(number=2, date=2024-08-20, totalPayment=4607.48, interestPayment=267.03, debtPayment=4340.45, remainingDebt=22362.07), PaymentScheduleElementDto(number=3, date=2024-09-20, totalPayment=4607.48, interestPayment=223.62, debtPayment=4383.86, remainingDebt=17978.22), PaymentScheduleElementDto(number=4, date=2024-10-20, totalPayment=4607.48, interestPayment=179.78, debtPayment=4427.69, remainingDebt=13550.52), PaymentScheduleElementDto(number=5, date=2024-11-20, totalPayment=4607.48, interestPayment=135.51, debtPayment=4471.97, remainingDebt=9078.55), PaymentScheduleElementDto(number=6, date=2024-12-20, totalPayment=4607.48, interestPayment=90.79, debtPayment=4516.69, remainingDebt=4561.86), PaymentScheduleElementDto(number=7, date=2025-01-20, totalPayment=4607.48, interestPayment=45.62, debtPayment=4561.86, remainingDebt=0.00)]
-2024-06-20 01:49:16 - Сгенерированный CreditDto: CreditDto(amount=31000, term=7, monthlyPayment=4607.4767703376, rate=0.12, psk=32252.3373923632, isInsuranceEnabled=true, isSalaryClient=true, paymentSchedule=[PaymentScheduleElementDto(number=1, date=2024-07-20, totalPayment=4607.48, interestPayment=310.00, debtPayment=4297.48, remainingDebt=26702.52), PaymentScheduleElementDto(number=2, date=2024-08-20, totalPayment=4607.48, interestPayment=267.03, debtPayment=4340.45, remainingDebt=22362.07), PaymentScheduleElementDto(number=3, date=2024-09-20, totalPayment=4607.48, interestPayment=223.62, debtPayment=4383.86, remainingDebt=17978.22), PaymentScheduleElementDto(number=4, date=2024-10-20, totalPayment=4607.48, interestPayment=179.78, debtPayment=4427.69, remainingDebt=13550.52), PaymentScheduleElementDto(number=5, date=2024-11-20, totalPayment=4607.48, interestPayment=135.51, debtPayment=4471.97, remainingDebt=9078.55), PaymentScheduleElementDto(number=6, date=2024-12-20, totalPayment=4607.48, interestPayment=90.79, debtPayment=4516.69, remainingDebt=4561.86), PaymentScheduleElementDto(number=7, date=2025-01-20, totalPayment=4607.48, interestPayment=45.62, debtPayment=4561.86, remainingDebt=0.00)])
-2024-06-20 01:49:16 - Завершена генерация CreditDto по запросу: ScoringDataDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, gender=MALE, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111, passportIssueDate=2014-11-21, passportIssueBranch=MOSCOW, maritalStatus=MARRIED, dependentAmount=0, employment=EmploymentDto(employmentStatus=EMPLOYED, employerINN=1234567890, salary=60000, employmentPosition=null, workExperienceTotal=24, workExperienceCurrent=24), accountNumber=hi, isInsuranceEnabled=true, isSalaryClient=true)
-2024-06-20 01:49:16 - Сгенерированный ответ: CreditDto(amount=31000, term=7, monthlyPayment=4607.4767703376, rate=0.12, psk=32252.3373923632, isInsuranceEnabled=true, isSalaryClient=true, paymentSchedule=[PaymentScheduleElementDto(number=1, date=2024-07-20, totalPayment=4607.48, interestPayment=310.00, debtPayment=4297.48, remainingDebt=26702.52), PaymentScheduleElementDto(number=2, date=2024-08-20, totalPayment=4607.48, interestPayment=267.03, debtPayment=4340.45, remainingDebt=22362.07), PaymentScheduleElementDto(number=3, date=2024-09-20, totalPayment=4607.48, interestPayment=223.62, debtPayment=4383.86, remainingDebt=17978.22), PaymentScheduleElementDto(number=4, date=2024-10-20, totalPayment=4607.48, interestPayment=179.78, debtPayment=4427.69, remainingDebt=13550.52), PaymentScheduleElementDto(number=5, date=2024-11-20, totalPayment=4607.48, interestPayment=135.51, debtPayment=4471.97, remainingDebt=9078.55), PaymentScheduleElementDto(number=6, date=2024-12-20, totalPayment=4607.48, interestPayment=90.79, debtPayment=4516.69, remainingDebt=4561.86), PaymentScheduleElementDto(number=7, date=2025-01-20, totalPayment=4607.48, interestPayment=45.62, debtPayment=4561.86, remainingDebt=0.00)])
-2024-06-20 01:50:44 - Полученный запрос: LoanStatementRequestDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, email=test@gmail.com, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111)
-2024-06-20 01:50:44 - Начало генерации List<LoanOfferDto> по запросу: LoanStatementRequestDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, email=test@gmail.com, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111)
-2024-06-20 01:50:44 - Полученный monthlyPayment: 4728.6884932934
-2024-06-20 01:50:44 - Полученный psk: 33100.8194530538
-2024-06-20 01:50:44 - Полученный monthlyPayment: 4698.2411007125
-2024-06-20 01:50:44 - Полученный psk: 32887.6877049875
-2024-06-20 01:50:44 - Полученный monthlyPayment: 4683.0534398013
-2024-06-20 01:50:44 - Полученный psk: 32781.3740786091
-2024-06-20 01:50:44 - Полученный monthlyPayment: 4652.7503471827
-2024-06-20 01:50:44 - Полученный psk: 32569.2524302789
-2024-06-20 01:50:44 - Сгенерированный List<LoanOfferDto>: [LoanOfferDto(statementId=723fcfae-07ed-423d-ba8e-06bb9b9de605, requestedAmount=31000, totalAmount=33100.8194530538, term=7, monthlyPayment=4728.6884932934, rate=0.20, isInsuranceEnabled=false, isSalaryClient=false), LoanOfferDto(statementId=7ae1c9c1-2788-4413-bbb7-20fe2e868568, requestedAmount=31000, totalAmount=32887.6877049875, term=7, monthlyPayment=4698.2411007125, rate=0.18, isInsuranceEnabled=true, isSalaryClient=false), LoanOfferDto(statementId=cf3d8462-b8d1-4d32-9c20-3c6931864081, requestedAmount=31000, totalAmount=32781.3740786091, term=7, monthlyPayment=4683.0534398013, rate=0.17, isInsuranceEnabled=false, isSalaryClient=true), LoanOfferDto(statementId=59359c3d-c363-46a1-9545-98f8208fd14e, requestedAmount=31000, totalAmount=32569.2524302789, term=7, monthlyPayment=4652.7503471827, rate=0.15, isInsuranceEnabled=true, isSalaryClient=true)]
-2024-06-20 01:50:44 - Завершена генерация List<LoanOfferDto> по запросу: LoanStatementRequestDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, email=test@gmail.com, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111)
-2024-06-20 01:50:44 - Сгенерированный ответ: [LoanOfferDto(statementId=723fcfae-07ed-423d-ba8e-06bb9b9de605, requestedAmount=31000, totalAmount=33100.8194530538, term=7, monthlyPayment=4728.6884932934, rate=0.20, isInsuranceEnabled=false, isSalaryClient=false), LoanOfferDto(statementId=7ae1c9c1-2788-4413-bbb7-20fe2e868568, requestedAmount=31000, totalAmount=32887.6877049875, term=7, monthlyPayment=4698.2411007125, rate=0.18, isInsuranceEnabled=true, isSalaryClient=false), LoanOfferDto(statementId=cf3d8462-b8d1-4d32-9c20-3c6931864081, requestedAmount=31000, totalAmount=32781.3740786091, term=7, monthlyPayment=4683.0534398013, rate=0.17, isInsuranceEnabled=false, isSalaryClient=true), LoanOfferDto(statementId=59359c3d-c363-46a1-9545-98f8208fd14e, requestedAmount=31000, totalAmount=32569.2524302789, term=7, monthlyPayment=4652.7503471827, rate=0.15, isInsuranceEnabled=true, isSalaryClient=true)]
-2024-06-20 01:50:58 - Полученный запрос: ScoringDataDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, gender=MALE, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111, passportIssueDate=2014-11-21, passportIssueBranch=MOSCOW, maritalStatus=MARRIED, dependentAmount=0, employment=EmploymentDto(employmentStatus=EMPLOYED, employerINN=1234567890, salary=60000, employmentPosition=null, workExperienceTotal=24, workExperienceCurrent=24), accountNumber=hi, isInsuranceEnabled=true, isSalaryClient=true)
-2024-06-20 01:50:58 - Начало генерации CreditDto по запросу: ScoringDataDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, gender=MALE, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111, passportIssueDate=2014-11-21, passportIssueBranch=MOSCOW, maritalStatus=MARRIED, dependentAmount=0, employment=EmploymentDto(employmentStatus=EMPLOYED, employerINN=1234567890, salary=60000, employmentPosition=null, workExperienceTotal=24, workExperienceCurrent=24), accountNumber=hi, isInsuranceEnabled=true, isSalaryClient=true)
-2024-06-20 01:50:58 - Начало скоринга для запроса: ScoringDataDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, gender=MALE, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111, passportIssueDate=2014-11-21, passportIssueBranch=MOSCOW, maritalStatus=MARRIED, dependentAmount=0, employment=EmploymentDto(employmentStatus=EMPLOYED, employerINN=1234567890, salary=60000, employmentPosition=null, workExperienceTotal=24, workExperienceCurrent=24), accountNumber=hi, isInsuranceEnabled=true, isSalaryClient=true)
-2024-06-20 01:50:58 - Скоринг успешно завершён для запроса: ScoringDataDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, gender=MALE, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111, passportIssueDate=2014-11-21, passportIssueBranch=MOSCOW, maritalStatus=MARRIED, dependentAmount=0, employment=EmploymentDto(employmentStatus=EMPLOYED, employerINN=1234567890, salary=60000, employmentPosition=null, workExperienceTotal=24, workExperienceCurrent=24), accountNumber=hi, isInsuranceEnabled=true, isSalaryClient=true)
-2024-06-20 01:50:58 - Результирующая ставка: 0.12
-2024-06-20 01:50:58 - Полученный monthlyPayment: 4607.4767703376
-2024-06-20 01:50:58 - Полученный psk: 32252.3373923632
-2024-06-20 01:50:58 - Полученный List<PaymentScheduleElementDto>: [PaymentScheduleElementDto(number=1, date=2024-07-20, totalPayment=4607.48, interestPayment=310.00, debtPayment=4297.48, remainingDebt=26702.52), PaymentScheduleElementDto(number=2, date=2024-08-20, totalPayment=4607.48, interestPayment=267.03, debtPayment=4340.45, remainingDebt=22362.07), PaymentScheduleElementDto(number=3, date=2024-09-20, totalPayment=4607.48, interestPayment=223.62, debtPayment=4383.86, remainingDebt=17978.22), PaymentScheduleElementDto(number=4, date=2024-10-20, totalPayment=4607.48, interestPayment=179.78, debtPayment=4427.69, remainingDebt=13550.52), PaymentScheduleElementDto(number=5, date=2024-11-20, totalPayment=4607.48, interestPayment=135.51, debtPayment=4471.97, remainingDebt=9078.55), PaymentScheduleElementDto(number=6, date=2024-12-20, totalPayment=4607.48, interestPayment=90.79, debtPayment=4516.69, remainingDebt=4561.86), PaymentScheduleElementDto(number=7, date=2025-01-20, totalPayment=4607.48, interestPayment=45.62, debtPayment=4561.86, remainingDebt=0.00)]
-2024-06-20 01:50:58 - Сгенерированный CreditDto: CreditDto(amount=31000, term=7, monthlyPayment=4607.4767703376, rate=0.12, psk=32252.3373923632, isInsuranceEnabled=true, isSalaryClient=true, paymentSchedule=[PaymentScheduleElementDto(number=1, date=2024-07-20, totalPayment=4607.48, interestPayment=310.00, debtPayment=4297.48, remainingDebt=26702.52), PaymentScheduleElementDto(number=2, date=2024-08-20, totalPayment=4607.48, interestPayment=267.03, debtPayment=4340.45, remainingDebt=22362.07), PaymentScheduleElementDto(number=3, date=2024-09-20, totalPayment=4607.48, interestPayment=223.62, debtPayment=4383.86, remainingDebt=17978.22), PaymentScheduleElementDto(number=4, date=2024-10-20, totalPayment=4607.48, interestPayment=179.78, debtPayment=4427.69, remainingDebt=13550.52), PaymentScheduleElementDto(number=5, date=2024-11-20, totalPayment=4607.48, interestPayment=135.51, debtPayment=4471.97, remainingDebt=9078.55), PaymentScheduleElementDto(number=6, date=2024-12-20, totalPayment=4607.48, interestPayment=90.79, debtPayment=4516.69, remainingDebt=4561.86), PaymentScheduleElementDto(number=7, date=2025-01-20, totalPayment=4607.48, interestPayment=45.62, debtPayment=4561.86, remainingDebt=0.00)])
-2024-06-20 01:50:58 - Завершена генерация CreditDto по запросу: ScoringDataDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, gender=MALE, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111, passportIssueDate=2014-11-21, passportIssueBranch=MOSCOW, maritalStatus=MARRIED, dependentAmount=0, employment=EmploymentDto(employmentStatus=EMPLOYED, employerINN=1234567890, salary=60000, employmentPosition=null, workExperienceTotal=24, workExperienceCurrent=24), accountNumber=hi, isInsuranceEnabled=true, isSalaryClient=true)
-2024-06-20 01:50:58 - Сгенерированный ответ: CreditDto(amount=31000, term=7, monthlyPayment=4607.4767703376, rate=0.12, psk=32252.3373923632, isInsuranceEnabled=true, isSalaryClient=true, paymentSchedule=[PaymentScheduleElementDto(number=1, date=2024-07-20, totalPayment=4607.48, interestPayment=310.00, debtPayment=4297.48, remainingDebt=26702.52), PaymentScheduleElementDto(number=2, date=2024-08-20, totalPayment=4607.48, interestPayment=267.03, debtPayment=4340.45, remainingDebt=22362.07), PaymentScheduleElementDto(number=3, date=2024-09-20, totalPayment=4607.48, interestPayment=223.62, debtPayment=4383.86, remainingDebt=17978.22), PaymentScheduleElementDto(number=4, date=2024-10-20, totalPayment=4607.48, interestPayment=179.78, debtPayment=4427.69, remainingDebt=13550.52), PaymentScheduleElementDto(number=5, date=2024-11-20, totalPayment=4607.48, interestPayment=135.51, debtPayment=4471.97, remainingDebt=9078.55), PaymentScheduleElementDto(number=6, date=2024-12-20, totalPayment=4607.48, interestPayment=90.79, debtPayment=4516.69, remainingDebt=4561.86), PaymentScheduleElementDto(number=7, date=2025-01-20, totalPayment=4607.48, interestPayment=45.62, debtPayment=4561.86, remainingDebt=0.00)])
-2024-06-20 02:02:12 - Starting CalculatorApplication using Java 17.0.9 on DESKTOP-VUNRAED with PID 15616 (F:\Work\neoflex-bank-prototype\calculator\target\classes started by Кирилл in F:\Work\neoflex-bank-prototype)
-2024-06-20 02:02:12 - Running with Spring Boot v2.7.18, Spring v5.3.31
-2024-06-20 02:02:12 - No active profile set, falling back to 1 default profile: "default"
-2024-06-20 02:02:12 - Tomcat initialized with port(s): 4455 (http)
-2024-06-20 02:02:12 - Starting service [Tomcat]
-2024-06-20 02:02:12 - Starting Servlet engine: [Apache Tomcat/9.0.83]
-2024-06-20 02:02:13 - Initializing Spring embedded WebApplicationContext
-2024-06-20 02:02:13 - Root WebApplicationContext: initialization completed in 742 ms
-2024-06-20 02:02:13 - Tomcat started on port(s): 4455 (http) with context path ''
-2024-06-20 02:02:13 - Started CalculatorApplication in 1.868 seconds (JVM running for 2.37)
-2024-06-20 02:02:14 - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-06-20 02:02:14 - Initializing Servlet 'dispatcherServlet'
-2024-06-20 02:02:14 - Completed initialization in 0 ms
-2024-06-20 02:02:14 - Полученный запрос: ScoringDataDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, gender=MALE, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111, passportIssueDate=2014-11-21, passportIssueBranch=MOSCOW, maritalStatus=MARRIED, dependentAmount=0, employment=EmploymentDto(employmentStatus=EMPLOYED, employerINN=1234567890, salary=60000, employmentPosition=null, workExperienceTotal=24, workExperienceCurrent=24), accountNumber=hi, isInsuranceEnabled=true, isSalaryClient=true)
-2024-06-20 02:02:14 - Начало генерации CreditDto по запросу: ScoringDataDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, gender=MALE, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111, passportIssueDate=2014-11-21, passportIssueBranch=MOSCOW, maritalStatus=MARRIED, dependentAmount=0, employment=EmploymentDto(employmentStatus=EMPLOYED, employerINN=1234567890, salary=60000, employmentPosition=null, workExperienceTotal=24, workExperienceCurrent=24), accountNumber=hi, isInsuranceEnabled=true, isSalaryClient=true)
-2024-06-20 02:02:14 - Начало скоринга для запроса: ScoringDataDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, gender=MALE, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111, passportIssueDate=2014-11-21, passportIssueBranch=MOSCOW, maritalStatus=MARRIED, dependentAmount=0, employment=EmploymentDto(employmentStatus=EMPLOYED, employerINN=1234567890, salary=60000, employmentPosition=null, workExperienceTotal=24, workExperienceCurrent=24), accountNumber=hi, isInsuranceEnabled=true, isSalaryClient=true)
-2024-06-20 02:02:14 - Скоринг успешно завершён для запроса: ScoringDataDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, gender=MALE, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111, passportIssueDate=2014-11-21, passportIssueBranch=MOSCOW, maritalStatus=MARRIED, dependentAmount=0, employment=EmploymentDto(employmentStatus=EMPLOYED, employerINN=1234567890, salary=60000, employmentPosition=null, workExperienceTotal=24, workExperienceCurrent=24), accountNumber=hi, isInsuranceEnabled=true, isSalaryClient=true)
-2024-06-20 02:02:14 - Результирующая ставка: 0.12
-2024-06-20 02:02:14 - Полученный monthlyPayment: 4607.4767703376
-2024-06-20 02:02:14 - Полученный psk: 32252.3373923632
-2024-06-20 02:02:14 - Полученный List<PaymentScheduleElementDto>: [PaymentScheduleElementDto(number=1, date=2024-07-20, totalPayment=4607.48, interestPayment=310.00, debtPayment=4297.48, remainingDebt=26702.52), PaymentScheduleElementDto(number=2, date=2024-08-20, totalPayment=4607.48, interestPayment=267.03, debtPayment=4340.45, remainingDebt=22362.07), PaymentScheduleElementDto(number=3, date=2024-09-20, totalPayment=4607.48, interestPayment=223.62, debtPayment=4383.86, remainingDebt=17978.22), PaymentScheduleElementDto(number=4, date=2024-10-20, totalPayment=4607.48, interestPayment=179.78, debtPayment=4427.69, remainingDebt=13550.52), PaymentScheduleElementDto(number=5, date=2024-11-20, totalPayment=4607.48, interestPayment=135.51, debtPayment=4471.97, remainingDebt=9078.55), PaymentScheduleElementDto(number=6, date=2024-12-20, totalPayment=4607.48, interestPayment=90.79, debtPayment=4516.69, remainingDebt=4561.86), PaymentScheduleElementDto(number=7, date=2025-01-20, totalPayment=4607.48, interestPayment=45.62, debtPayment=4561.86, remainingDebt=0.00)]
-2024-06-20 02:02:14 - Сгенерированный CreditDto: CreditDto(amount=31000, term=7, monthlyPayment=4607.4767703376, rate=0.12, psk=32252.3373923632, isInsuranceEnabled=true, isSalaryClient=true, paymentSchedule=[PaymentScheduleElementDto(number=1, date=2024-07-20, totalPayment=4607.48, interestPayment=310.00, debtPayment=4297.48, remainingDebt=26702.52), PaymentScheduleElementDto(number=2, date=2024-08-20, totalPayment=4607.48, interestPayment=267.03, debtPayment=4340.45, remainingDebt=22362.07), PaymentScheduleElementDto(number=3, date=2024-09-20, totalPayment=4607.48, interestPayment=223.62, debtPayment=4383.86, remainingDebt=17978.22), PaymentScheduleElementDto(number=4, date=2024-10-20, totalPayment=4607.48, interestPayment=179.78, debtPayment=4427.69, remainingDebt=13550.52), PaymentScheduleElementDto(number=5, date=2024-11-20, totalPayment=4607.48, interestPayment=135.51, debtPayment=4471.97, remainingDebt=9078.55), PaymentScheduleElementDto(number=6, date=2024-12-20, totalPayment=4607.48, interestPayment=90.79, debtPayment=4516.69, remainingDebt=4561.86), PaymentScheduleElementDto(number=7, date=2025-01-20, totalPayment=4607.48, interestPayment=45.62, debtPayment=4561.86, remainingDebt=0.00)])
-2024-06-20 02:02:14 - Завершена генерация CreditDto по запросу: ScoringDataDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, gender=MALE, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111, passportIssueDate=2014-11-21, passportIssueBranch=MOSCOW, maritalStatus=MARRIED, dependentAmount=0, employment=EmploymentDto(employmentStatus=EMPLOYED, employerINN=1234567890, salary=60000, employmentPosition=null, workExperienceTotal=24, workExperienceCurrent=24), accountNumber=hi, isInsuranceEnabled=true, isSalaryClient=true)
-2024-06-20 02:02:14 - Сгенерированный ответ: CreditDto(amount=31000, term=7, monthlyPayment=4607.4767703376, rate=0.12, psk=32252.3373923632, isInsuranceEnabled=true, isSalaryClient=true, paymentSchedule=[PaymentScheduleElementDto(number=1, date=2024-07-20, totalPayment=4607.48, interestPayment=310.00, debtPayment=4297.48, remainingDebt=26702.52), PaymentScheduleElementDto(number=2, date=2024-08-20, totalPayment=4607.48, interestPayment=267.03, debtPayment=4340.45, remainingDebt=22362.07), PaymentScheduleElementDto(number=3, date=2024-09-20, totalPayment=4607.48, interestPayment=223.62, debtPayment=4383.86, remainingDebt=17978.22), PaymentScheduleElementDto(number=4, date=2024-10-20, totalPayment=4607.48, interestPayment=179.78, debtPayment=4427.69, remainingDebt=13550.52), PaymentScheduleElementDto(number=5, date=2024-11-20, totalPayment=4607.48, interestPayment=135.51, debtPayment=4471.97, remainingDebt=9078.55), PaymentScheduleElementDto(number=6, date=2024-12-20, totalPayment=4607.48, interestPayment=90.79, debtPayment=4516.69, remainingDebt=4561.86), PaymentScheduleElementDto(number=7, date=2025-01-20, totalPayment=4607.48, interestPayment=45.62, debtPayment=4561.86, remainingDebt=0.00)])
+2024-07-22 04:12:32 - Starting CalculatorApplication using Java 17.0.9 on DESKTOP-VUNRAED with PID 19104 (F:\Work\neoflex-bank-prototype\calculator\target\classes started by Кирилл in F:\Work\neoflex-bank-prototype)
+2024-07-22 04:12:32 - Running with Spring Boot v2.7.18, Spring v5.3.31
+2024-07-22 04:12:32 - No active profile set, falling back to 1 default profile: "default"
+2024-07-22 04:12:33 - BeanFactory id=101102a1-80e3-362b-bea4-9361af918cb6
+2024-07-22 04:12:33 - Tomcat initialized with port(s): 4455 (http)
+2024-07-22 04:12:33 - Starting service [Tomcat]
+2024-07-22 04:12:33 - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2024-07-22 04:12:33 - Initializing Spring embedded WebApplicationContext
+2024-07-22 04:12:33 - Root WebApplicationContext: initialization completed in 742 ms
+2024-07-22 04:12:35 - Cannot determine local hostname
+2024-07-22 04:12:35 - Eureka HTTP Client uses RestTemplate.
+2024-07-22 04:12:36 - Cannot determine local hostname
+2024-07-22 04:12:36 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-07-22 04:12:36 - Setting initial instance status as: STARTING
+2024-07-22 04:12:36 - Initializing Eureka in region us-east-1
+2024-07-22 04:12:36 - Resolving eureka endpoints via configuration
+2024-07-22 04:12:36 - Disable delta property : false
+2024-07-22 04:12:36 - Single vip registry refresh property : null
+2024-07-22 04:12:36 - Force full registry fetch : false
+2024-07-22 04:12:36 - Application is null : false
+2024-07-22 04:12:36 - Registered Applications size is zero : true
+2024-07-22 04:12:36 - Application version is -1: true
+2024-07-22 04:12:36 - Getting all instance registry info from the eureka server
+2024-07-22 04:12:36 - The response status is 200
+2024-07-22 04:12:36 - Starting heartbeat executor: renew interval is: 30
+2024-07-22 04:12:36 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-07-22 04:12:36 - Discovery Client initialized at timestamp 1721610756474 with initial instances count: 1
+2024-07-22 04:12:36 - Registering application CALCULATOR with eureka with status UP
+2024-07-22 04:12:36 - Saw local status change event StatusChangeEvent [timestamp=1721610756478, current=UP, previous=STARTING]
+2024-07-22 04:12:36 - DiscoveryClient_CALCULATOR/localhost:calculator:4455: registering service...
+2024-07-22 04:12:36 - Tomcat started on port(s): 4455 (http) with context path ''
+2024-07-22 04:12:36 - Updating port to 4455
+2024-07-22 04:12:36 - DiscoveryClient_CALCULATOR/localhost:calculator:4455 - registration status: 204
+2024-07-22 04:12:37 - Cannot determine local hostname
+2024-07-22 04:12:37 - Started CalculatorApplication in 6.58 seconds (JVM running for 7.031)
+2024-07-22 04:12:55 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-22 04:12:55 - Initializing Servlet 'dispatcherServlet'
+2024-07-22 04:12:55 - Completed initialization in 1 ms
+2024-07-22 04:12:55 - Запрос на /calculator/offers: LoanStatementRequestDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, email=test@gmail.com, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111)
+2024-07-22 04:12:55 - Начало генерации List<LoanOfferDto> по запросу: LoanStatementRequestDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, email=test@gmail.com, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111)
+2024-07-22 04:12:55 - Полученный monthlyPayment: 4728.6884932934
+2024-07-22 04:12:55 - Полученный psk: 33100.8194530538
+2024-07-22 04:12:55 - Полученный monthlyPayment: 4698.2411007125
+2024-07-22 04:12:55 - Полученный psk: 32887.6877049875
+2024-07-22 04:12:55 - Полученный monthlyPayment: 4683.0534398013
+2024-07-22 04:12:55 - Полученный psk: 32781.3740786091
+2024-07-22 04:12:55 - Полученный monthlyPayment: 4652.7503471827
+2024-07-22 04:12:55 - Полученный psk: 32569.2524302789
+2024-07-22 04:12:55 - Сгенерированный List<LoanOfferDto>: [LoanOfferDto(statementId=d8c84807-b2f6-473c-9397-410bd90ac357, requestedAmount=31000, totalAmount=33100.8194530538, term=7, monthlyPayment=4728.6884932934, rate=0.20, isInsuranceEnabled=false, isSalaryClient=false), LoanOfferDto(statementId=6094d28b-7826-474d-8db5-7b6216b5146a, requestedAmount=31000, totalAmount=32887.6877049875, term=7, monthlyPayment=4698.2411007125, rate=0.18, isInsuranceEnabled=true, isSalaryClient=false), LoanOfferDto(statementId=6e0b0ea6-211e-459c-990b-75db94d678e3, requestedAmount=31000, totalAmount=32781.3740786091, term=7, monthlyPayment=4683.0534398013, rate=0.17, isInsuranceEnabled=false, isSalaryClient=true), LoanOfferDto(statementId=624e4883-bc19-4b3e-86f8-d7c2e2a668fd, requestedAmount=31000, totalAmount=32569.2524302789, term=7, monthlyPayment=4652.7503471827, rate=0.15, isInsuranceEnabled=true, isSalaryClient=true)]
+2024-07-22 04:12:55 - Завершена генерация List<LoanOfferDto> по запросу: LoanStatementRequestDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, email=test@gmail.com, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111)
+2024-07-22 04:12:55 - Ответ от /calculator/offers: [LoanOfferDto(statementId=d8c84807-b2f6-473c-9397-410bd90ac357, requestedAmount=31000, totalAmount=33100.8194530538, term=7, monthlyPayment=4728.6884932934, rate=0.20, isInsuranceEnabled=false, isSalaryClient=false), LoanOfferDto(statementId=6094d28b-7826-474d-8db5-7b6216b5146a, requestedAmount=31000, totalAmount=32887.6877049875, term=7, monthlyPayment=4698.2411007125, rate=0.18, isInsuranceEnabled=true, isSalaryClient=false), LoanOfferDto(statementId=6e0b0ea6-211e-459c-990b-75db94d678e3, requestedAmount=31000, totalAmount=32781.3740786091, term=7, monthlyPayment=4683.0534398013, rate=0.17, isInsuranceEnabled=false, isSalaryClient=true), LoanOfferDto(statementId=624e4883-bc19-4b3e-86f8-d7c2e2a668fd, requestedAmount=31000, totalAmount=32569.2524302789, term=7, monthlyPayment=4652.7503471827, rate=0.15, isInsuranceEnabled=true, isSalaryClient=true)], (время выполнения: 13 ms)
+2024-07-22 04:13:22 - Запрос на /calculator/offers: LoanStatementRequestDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, email=test@gmail.com, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111)
+2024-07-22 04:13:22 - Начало генерации List<LoanOfferDto> по запросу: LoanStatementRequestDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, email=test@gmail.com, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111)
+2024-07-22 04:13:22 - Полученный monthlyPayment: 4728.6884932934
+2024-07-22 04:13:22 - Полученный psk: 33100.8194530538
+2024-07-22 04:13:22 - Полученный monthlyPayment: 4698.2411007125
+2024-07-22 04:13:22 - Полученный psk: 32887.6877049875
+2024-07-22 04:13:22 - Полученный monthlyPayment: 4683.0534398013
+2024-07-22 04:13:22 - Полученный psk: 32781.3740786091
+2024-07-22 04:13:22 - Полученный monthlyPayment: 4652.7503471827
+2024-07-22 04:13:22 - Полученный psk: 32569.2524302789
+2024-07-22 04:13:22 - Сгенерированный List<LoanOfferDto>: [LoanOfferDto(statementId=ddd24fac-7d0b-4393-9da0-81e0fc558926, requestedAmount=31000, totalAmount=33100.8194530538, term=7, monthlyPayment=4728.6884932934, rate=0.20, isInsuranceEnabled=false, isSalaryClient=false), LoanOfferDto(statementId=0640c783-b620-4fa2-a9f1-a186ff6562fb, requestedAmount=31000, totalAmount=32887.6877049875, term=7, monthlyPayment=4698.2411007125, rate=0.18, isInsuranceEnabled=true, isSalaryClient=false), LoanOfferDto(statementId=93bf8c94-322b-408e-82d9-81d3d390a6ec, requestedAmount=31000, totalAmount=32781.3740786091, term=7, monthlyPayment=4683.0534398013, rate=0.17, isInsuranceEnabled=false, isSalaryClient=true), LoanOfferDto(statementId=7cbba9e2-2548-48c4-8c8f-f28deb4f4b8e, requestedAmount=31000, totalAmount=32569.2524302789, term=7, monthlyPayment=4652.7503471827, rate=0.15, isInsuranceEnabled=true, isSalaryClient=true)]
+2024-07-22 04:13:22 - Завершена генерация List<LoanOfferDto> по запросу: LoanStatementRequestDto(amount=31000, term=7, firstName=Ivan, lastName=Ivan, middleName=Ivan, email=test@gmail.com, birthdate=2000-11-21, passportSeries=1111, passportNumber=111111)
+2024-07-22 04:13:22 - Ответ от /calculator/offers: [LoanOfferDto(statementId=ddd24fac-7d0b-4393-9da0-81e0fc558926, requestedAmount=31000, totalAmount=33100.8194530538, term=7, monthlyPayment=4728.6884932934, rate=0.20, isInsuranceEnabled=false, isSalaryClient=false), LoanOfferDto(statementId=0640c783-b620-4fa2-a9f1-a186ff6562fb, requestedAmount=31000, totalAmount=32887.6877049875, term=7, monthlyPayment=4698.2411007125, rate=0.18, isInsuranceEnabled=true, isSalaryClient=false), LoanOfferDto(statementId=93bf8c94-322b-408e-82d9-81d3d390a6ec, requestedAmount=31000, totalAmount=32781.3740786091, term=7, monthlyPayment=4683.0534398013, rate=0.17, isInsuranceEnabled=false, isSalaryClient=true), LoanOfferDto(statementId=7cbba9e2-2548-48c4-8c8f-f28deb4f4b8e, requestedAmount=31000, totalAmount=32569.2524302789, term=7, monthlyPayment=4652.7503471827, rate=0.15, isInsuranceEnabled=true, isSalaryClient=true)], (время выполнения: 1 ms)
+2024-07-22 04:13:27 - Unregistering application CALCULATOR with eureka with status DOWN
+2024-07-22 04:13:27 - Saw local status change event StatusChangeEvent [timestamp=1721610807097, current=DOWN, previous=UP]
+2024-07-22 04:13:27 - DiscoveryClient_CALCULATOR/localhost:calculator:4455: registering service...
+2024-07-22 04:13:27 - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:4410/eureka/} exception=I/O error on POST request for "http://localhost:4410/eureka/apps/CALCULATOR": Connect to localhost:4410 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:4410 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:4410/eureka/apps/CALCULATOR": Connect to localhost:4410 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:4410 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:791)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:717)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:608)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to localhost:4410 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:782)
+	... 21 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:593)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 34 more
+
+2024-07-22 04:13:27 - Request execution failed with message: I/O error on POST request for "http://localhost:4410/eureka/apps/CALCULATOR": Connect to localhost:4410 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:4410 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+2024-07-22 04:13:27 - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:4410/eureka/}, exception=I/O error on POST request for "http://localhost:4410/eureka/apps/CALCULATOR": Connect to localhost:4410 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:4410 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:4410/eureka/apps/CALCULATOR": Connect to localhost:4410 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:4410 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:791)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:717)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:608)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to localhost:4410 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:782)
+	... 22 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:593)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 35 more
+
+2024-07-22 04:13:27 - Request execution failed with message: I/O error on POST request for "http://localhost:4410/eureka/apps/CALCULATOR": Connect to localhost:4410 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:4410 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+2024-07-22 04:13:27 - DiscoveryClient_CALCULATOR/localhost:calculator:4455 - registration failed Cannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-07-22 04:13:27 - There was a problem with the instance info replicator
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-07-22 04:13:27 - Shutting down DiscoveryClient ...
+2024-07-22 04:13:30 - Unregistering ...
+2024-07-22 04:13:30 - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:4410/eureka/}, exception=I/O error on DELETE request for "http://localhost:4410/eureka/apps/CALCULATOR/localhost:calculator:4455": Connect to localhost:4410 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:4410 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:4410/eureka/apps/CALCULATOR/localhost:calculator:4455": Connect to localhost:4410 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:4410 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:791)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:717)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:608)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:972)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:948)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:197)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:190)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:390)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:213)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1163)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1156)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1120)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1086)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:174)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1032)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to localhost:4410 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:782)
+	... 40 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:593)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 53 more
+
+2024-07-22 04:13:30 - Request execution failed with message: I/O error on DELETE request for "http://localhost:4410/eureka/apps/CALCULATOR/localhost:calculator:4455": Connect to localhost:4410 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:4410 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+2024-07-22 04:13:30 - DiscoveryClient_CALCULATOR/localhost:calculator:4455 - de-registration failedCannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:972)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:948)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:197)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:190)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:390)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:213)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1163)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1156)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1120)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1086)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:174)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1032)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-07-22 04:13:30 - Completed shut down of DiscoveryClient

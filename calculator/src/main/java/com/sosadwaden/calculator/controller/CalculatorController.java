@@ -37,11 +37,6 @@ public class CalculatorController {
         this.calculatorService = calculatorService;
     }
 
-    /**
-     * Расчёт возможных условий кредита
-     * @param request
-     * @return List<LoanOfferDto>
-     */
     @Operation(
             summary = "Создать кредитные предложения",
             description = "Создать список кредитных предложений от худшего к лучшему"
@@ -52,21 +47,17 @@ public class CalculatorController {
     })
     @PostMapping("${application.endpoint.offers}")
     public ResponseEntity<List<LoanOfferDto>> offers(@Valid @RequestBody LoanStatementRequestDto request) {
-            logger.info("Запрос на /calculator/offers: {}", request);
-            List<LoanOfferDto> response = calculatorService.generateOffers(request);
+        long startTime = System.currentTimeMillis();
+        logger.info("Запрос на /calculator/offers: {}", request);
 
-            logger.info("Ответ от /calculator/offers: {}", response);
-            return new ResponseEntity<>(response, HttpStatus.OK);
+        List<LoanOfferDto> response = calculatorService.generateOffers(request);
+
+        long duration = System.currentTimeMillis() - startTime;
+        logger.info("Ответ от /calculator/offers: {}, (время выполнения: {} ms)", response, duration);
+
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
-
-    /**
-     * Валидация присланных данных +
-     * скоринг данных +
-     * полный расчет параметров кредита.
-     * @param request
-     * @return
-     */
     @Operation(
             summary = "Получить параметры кредита",
             description = "Контроллер возвращает итоговую ставку (rate), полную стоимость кредит (psk), " +
@@ -81,10 +72,14 @@ public class CalculatorController {
     })
     @PostMapping("${application.endpoint.calc}")
     public ResponseEntity<CreditDto> calc(@Valid @RequestBody ScoringDataDto request) {
+        long startTime = System.currentTimeMillis();
         logger.info("Запрос на /calculator/calc: {}", request);
+
         CreditDto response = calculatorService.generateCreditDto(request);
 
-        logger.info("Ответ от /calculator/calc: {}", response);
+        long duration = System.currentTimeMillis() - startTime;
+        logger.info("Ответ от /calculator/calc: {}, (время выполнения: {} ms)", response, duration);
+
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 }

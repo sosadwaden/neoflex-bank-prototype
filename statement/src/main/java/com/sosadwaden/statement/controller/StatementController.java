@@ -41,18 +41,27 @@ public class StatementController {
     })
     @PostMapping
     public ResponseEntity<List<LoanOfferDto>> calculationOfPossibleLoanTerms(@Valid @RequestBody LoanStatementRequestDto request) {
+        long startTime = System.currentTimeMillis();
         logger.info("Запрос на /statement: {}", request);
+
         List<LoanOfferDto> response = statementService.calculationOfPossibleLoanTerms(request);
 
-        logger.info("Ответ от /statement: {}", response);
+        long duration = System.currentTimeMillis() - startTime;
+        logger.info("Ответ от /statement: {}, (время выполнения: {} ms)", response, duration);
+
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
     @Operation(summary = "Выбор одного из предложений")
     @PostMapping("${application.endpoint.offer}")
     public ResponseEntity<Void> offer(@RequestBody LoanOfferDto request) {
+        long startTime = System.currentTimeMillis();
         logger.info("Запрос на /statement/offer: {}", request);
+
         statementService.offer(request);
+
+        long duration = System.currentTimeMillis() - startTime;
+        logger.info("Запрос по адресу /statement/offer выполнен успешно; (время выполнения: {} ms)", duration);
 
         return ResponseEntity.status(HttpStatus.OK).build();
     }
