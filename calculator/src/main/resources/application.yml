@@ -13,6 +13,15 @@ application:
     offers: "/offers"
     calc: "/calc"
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, metrics, loggers
+  endpoint:
+    health:
+      show-details: always
+
 eureka:
   client:
     serviceUrl:
