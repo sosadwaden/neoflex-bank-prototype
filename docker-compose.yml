@@ -18,3 +18,9 @@ services:
       KAFKA_LOG_DIRS: /kafka/logs
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - "1025:1025"
+      - "8025:8025"

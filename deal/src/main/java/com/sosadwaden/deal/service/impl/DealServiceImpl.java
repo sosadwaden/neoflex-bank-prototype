@@ -22,6 +22,7 @@ import com.sosadwaden.deal.service.DealService;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -39,6 +40,7 @@ public class DealServiceImpl implements DealService {
     private final ClientMapper clientMapper;
     private final AppliedOfferMapper appliedOfferMapper;
     private final CreditMapper creditMapper;
+    private final KafkaTemplate<String, EmailMessage> kafkaTemplate;
     private static final Logger logger = LoggerFactory.getLogger(DealServiceImpl.class);
 
     @Override
@@ -84,6 +86,14 @@ public class DealServiceImpl implements DealService {
         statement.setStatus(ApplicationStatus.APPROVED);
 
         statementRepository.save(statement);
+
+        EmailMessage emailMessage = new EmailMessage();
+        emailMessage.setStatementId(request.getStatementId());
+        emailMessage.setAddress(statement.getClient().getEmail());
+        emailMessage.setTopic(Topic.FINISH_REGISTRATION);
+
+        kafkaTemplate.send("finish-registration", emailMessage);
+        logger.info("Сообщение отправлено в Kafka топик finish-registration: {}", emailMessage);
     }
 
     @Override

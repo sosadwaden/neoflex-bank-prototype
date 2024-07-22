@@ -3,6 +3,8 @@ package com.sosadwaden.deal.dto;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
+import java.util.UUID;
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -13,5 +15,5 @@ public class EmailMessage {
 
     String address;
     Topic topic;
-    Long statementId;
+    UUID statementId;
 }

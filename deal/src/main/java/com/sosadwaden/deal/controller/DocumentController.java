@@ -9,6 +9,8 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.UUID;
+
 @RestController
 @RequestMapping("/deal/document")
 @Tag(name = "Document controller", description = "Контроллер для работы с документами по адресу /deal/document")
@@ -20,7 +22,7 @@ public class DocumentController {
     @Operation(summary = "Запрос на отправку документов")
     @PostMapping("/{statementId}/send")
     public void sendDocument(
-            @Parameter(description = "ID заявления", required = true) @PathVariable Long statementId,
+            @Parameter(description = "ID заявления", required = true) @PathVariable UUID statementId,
             @Parameter(description = "Сообщение электронной почты", required = true) @RequestBody EmailMessage emailMessage) {
         emailMessage.setStatementId(statementId);
         emailMessage.setTopic(Topic.SEND_DOCUMENTS);
@@ -30,7 +32,7 @@ public class DocumentController {
     @Operation(summary = "Запрос на подписание документов")
     @PostMapping("/{statementId}/sign")
     public void signDocument(
-            @Parameter(description = "ID заявления", required = true) @PathVariable Long statementId,
+            @Parameter(description = "ID заявления", required = true) @PathVariable UUID statementId,
             @Parameter(description = "Сообщение электронной почты", required = true) @RequestBody EmailMessage emailMessage) {
         emailMessage.setStatementId(statementId);
         emailMessage.setTopic(Topic.SEND_SES);
@@ -40,7 +42,7 @@ public class DocumentController {
     @Operation(summary = "Подписание документов")
     @PostMapping("/{statementId}/code")
     public void codeDocument(
-            @Parameter(description = "ID заявления", required = true) @PathVariable Long statementId,
+            @Parameter(description = "ID заявления", required = true) @PathVariable UUID statementId,
             @Parameter(description = "Сообщение электронной почты", required = true) @RequestBody EmailMessage emailMessage) {
         emailMessage.setStatementId(statementId);
         emailMessage.setTopic(Topic.CREDIT_ISSUED);
