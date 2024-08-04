@@ -7,6 +7,7 @@ import com.sosadwaden.deal.service.DealService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Tag(name = "Deal controller", description = "Контроллер для путей /deal")
 @RequiredArgsConstructor
 @RequestMapping("/deal")
 @RestController
@@ -33,10 +35,14 @@ public class DealController {
     })
     @PostMapping("${application.endpoint.statement}")
     public ResponseEntity<List<LoanOfferDto>> statement(@RequestBody LoanStatementRequestDto request) {
+        long startTime = System.currentTimeMillis();
         logger.info("Запрос на /deal/statement: {}", request);
+
         List<LoanOfferDto> response = dealService.statement(request);
 
-        logger.info("Ответ от /deal/statement: {}", response);
+        long duration = System.currentTimeMillis() - startTime;
+        logger.info("Ответ от /deal/statement: {}, (время выполнения: {} ms)", response, duration);
+
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 
@@ -51,8 +57,13 @@ public class DealController {
     })
     @PostMapping("${application.endpoint.offerSelect}")
     public ResponseEntity<Void> select(@RequestBody LoanOfferDto request) {
+        long startTime = System.currentTimeMillis();
         logger.info("Запрос на /deal/offer/select: {}", request);
+
         dealService.offerSelect(request);
+
+        long duration = System.currentTimeMillis() - startTime;
+        logger.info("Запрос по адресу /deal/offer/select выполнен успешно; (время выполнения: {} ms)", duration);
 
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
@@ -68,8 +79,13 @@ public class DealController {
     @PostMapping("${application.endpoint.calculate}/{statementId}")
     public ResponseEntity<Void> calculate(@PathVariable String statementId,
                           @RequestBody FinishRegistrationRequestDto request) {
-        logger.info("Запрос на /deal/calculate: {}", request);
+        long startTime = System.currentTimeMillis();
+        logger.info("Запрос на /deal/calculate/{statementId}: {}", request);
+
         dealService.calculateByStatementId(request, statementId);
+
+        long duration = System.currentTimeMillis() - startTime;
+        logger.info("Запрос по адресу /deal/calculate/{statementId} выполнен успешно; (время выполнения: {} ms)", duration);
 
         return ResponseEntity.status(HttpStatus.OK).build();
     }

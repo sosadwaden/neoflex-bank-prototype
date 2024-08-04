@@ -34,6 +34,7 @@ public class ExceptionAPIHandler {
                 .collect(Collectors.toList());
 
         logger.error("Ошибка валидации: {}", errors);
+        logger.debug("Детали исключения: ", exception);
         return new ResponseEntity<>(ValidationErrorResponse.builder().errors(errors).build(), HttpStatus.BAD_REQUEST);
     }
 
@@ -44,12 +45,17 @@ public class ExceptionAPIHandler {
                 exception.getValue(), field, getAllowedEnumValues(exception.getTargetType()));
         ValidationError errorDetails = new ValidationError(field, error);
 
+        logger.error("Неверный формат для поля '{}': {}", field, error);
+        logger.debug("Детали исключения: ", exception);
+
         return new ResponseEntity<>(List.of(errorDetails), HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(ScoringFailureException.class)
     public ResponseEntity<String> handleScoringFailureException(ScoringFailureException exception) {
         logger.warn("Скоринг неудался: {}", exception.getMessage());
+        logger.debug("Детали исключения: ", exception);
+
         return new ResponseEntity<>(exception.getMessage(), HttpStatus.UNPROCESSABLE_ENTITY);
     }
 

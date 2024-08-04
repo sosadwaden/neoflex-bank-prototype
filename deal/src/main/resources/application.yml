@@ -1,3 +1,6 @@
+server:
+  port: 4456
+
 spring:
   application:
     name: deal
@@ -20,12 +23,23 @@ spring:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 
-server:
-  port: 4456
-
 application:
   endpoint:
     statement: "/statement"
     offerSelect: "/offer/select"
     calculate: "/calculate"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, metrics, loggers
+  endpoint:
+    health:
+      show-details: always
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:4410/eureka/
 

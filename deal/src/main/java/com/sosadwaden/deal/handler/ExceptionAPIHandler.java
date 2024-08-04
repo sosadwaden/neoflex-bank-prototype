@@ -31,6 +31,7 @@ public class ExceptionAPIHandler {
                 .build();
 
         logger.error("Statement с таким id не найден: {}", errorResponse);
+        logger.debug("Детали исключения: ", exception);
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(errorResponse);
     }
 }

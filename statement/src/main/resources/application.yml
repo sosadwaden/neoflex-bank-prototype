@@ -8,3 +8,17 @@ server:
 application:
   endpoint:
     offer: "/offer"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, metrics, loggers
+  endpoint:
+    health:
+      show-details: always
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:4410/eureka/

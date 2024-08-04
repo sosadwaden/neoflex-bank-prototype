@@ -65,7 +65,6 @@ public class Client {
 
     String accountNumber;
 
-    @Builder.Default
-    @OneToMany(mappedBy = "client")
-    List<Statement> statements = new ArrayList<>();
+    @OneToOne(mappedBy = "client")
+    Statement statement;
 }
