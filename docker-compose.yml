@@ -18,17 +18,16 @@ services:
     depends_on:
       - eureka-server
 
-#  calculator:
-#    build:
-#      context: ./calculator
-#      dockerfile: Dockerfile
-#    ports:
-#      - "4455:4455"
-#    environment:
-#      - EUREKA_CLIENT_SERVICE_URL_DEFAULT_ZONE=http://eureka-server:8761/eureka
-#    depends_on:
-#      - kafka
-#      - eureka-server
+  calculator:
+    build:
+      context: ./calculator
+      dockerfile: Dockerfile
+    ports:
+      - "4455:4455"
+    environment:
+      - EUREKA_CLIENT_SERVICE_URL_DEFAULT_ZONE=http://eureka-server:8761/eureka
+    depends_on:
+      - eureka-server
 #
 #  deal:
 #    build:
