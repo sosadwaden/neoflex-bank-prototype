@@ -29,6 +29,12 @@ application:
     offerSelect: "/offer/select"
     calculate: "/calculate"
 
+calculator:
+  offers:
+    url: http://calculator:4455/calculator/offers
+  calc:
+    url: http://calculator:4455/calculator/calc
+
 management:
   endpoints:
     web:
@@ -42,4 +48,3 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:4410/eureka/
-
