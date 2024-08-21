@@ -21,4 +21,4 @@ management:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:4410/eureka/
+      defaultZone: http://eureka-server:8761/eureka/

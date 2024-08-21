@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
-@FeignClient(name = "calculator-service", url = "http://localhost:4455")
+@FeignClient(name = "calculator-service", url = "http://calculator:4455")
 public interface CalculatorServiceClient {
 
     @PostMapping("/calculator/offers")

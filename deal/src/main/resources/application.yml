@@ -19,7 +19,7 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
   kafka:
     producer:
-      bootstrap-servers: localhost:9092
+      bootstrap-servers: kafka:9092
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 
@@ -28,6 +28,12 @@ application:
     statement: "/statement"
     offerSelect: "/offer/select"
     calculate: "/calculate"
+
+calculator:
+  offers:
+    url: http://calculator:4455/calculator/offers
+  calc:
+    url: http://calculator:4455/calculator/calc
 
 management:
   endpoints:
@@ -41,5 +47,4 @@ management:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:4410/eureka/
-
+      defaultZone: http://eureka-server:8761/eureka/
