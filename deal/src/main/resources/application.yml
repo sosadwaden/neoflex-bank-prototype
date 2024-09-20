@@ -1,0 +1,50 @@
+server:
+  port: 4456
+
+spring:
+  application:
+    name: deal
+  datasource:
+    url: jdbc:postgresql://localhost:5432/neoflex_bank_prototype
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  liquibase:
+    change-log: db/changelog/changelog-master.xml
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  kafka:
+    producer:
+      bootstrap-servers: kafka:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+application:
+  endpoint:
+    statement: "/statement"
+    offerSelect: "/offer/select"
+    calculate: "/calculate"
+
+calculator:
+  offers:
+    url: http://calculator:4455/calculator/offers
+  calc:
+    url: http://calculator:4455/calculator/calc
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, metrics, loggers
+  endpoint:
+    health:
+      show-details: always
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-server:8761/eureka/
